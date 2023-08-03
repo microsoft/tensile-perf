@@ -1,0 +1,21 @@
+<script type="module">
+
+    import { injectStyles } from '@stress-test/tools';
+    import { config } from './stress-test-assets/config.js';
+
+    const { testFixture, testFile, testType } = getTestOptions(config);
+
+    const { fixture } = await import(`./stress-test-assets/${testFixture}`);
+    injectStyles({ selectors: fixture.selectors });
+
+    const { default: itemRenderer, tests } = await import(`./stress-test-file/${testFile}`);
+    console.log("config", config);
+
+    tests[testType]({
+        fixture, 
+        itemRenderer,
+        renderTargetSelector: '#root',
+        onComplete: () => onTestComplete({ testFixture, testFile, testType, testParameters: config.parameters, testMetrics: config.metrics })
+    });
+
+</script>

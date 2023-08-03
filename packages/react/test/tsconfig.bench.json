@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "lib": ["ES2019", "dom"],
+    "target": "ES2019",
+  },
+  "include": ["./**/*.tsx"],
+  "exclude": ["apps/**/*.tsx", "packages/**/*.tsx", "apps/**/*.ts", "packages/**/*.ts"]
+}

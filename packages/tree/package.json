@@ -1,0 +1,15 @@
+{
+  "name": "@stress-test/tree",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "dependencies": {
+    "@stress-test/tools": "0.1.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  }
+}

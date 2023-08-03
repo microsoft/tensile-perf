@@ -1,0 +1,73 @@
+{
+  "name": "tree",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/tree/src",
+  "projectType": "library",
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "nx run tree:build",
+          "nx run tree:symlink"
+        ],
+        "parallel": false
+      }
+    },
+    "build": {
+      "executor": "@nrwl/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "dependsOn": ["^build"],
+      "options": {
+        "buildableProjectDepsInPackageJsonType": "dependencies",
+        "outputPath": "packages/tree/dist",
+        "tsConfig": "packages/tree/tsconfig.lib.json",
+        "project": "packages/tree/package.json",
+        "entryFile": "packages/tree/src/index.ts",
+        "rollupConfig": "tools/getRollupOptions.js",
+        "compiler": "babel",
+        "external": ["tslib"],
+        "format": ["esm"],
+        "skipTypeField": true,
+        "assets": [
+          {
+            "glob": "packages/tree/README.md",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "packages/tree/LICENSE.txt",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "CONTRIBUTING.md",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "SECURITY.md",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "CODE_OF_CONDUCT.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "symlink": {
+      "command": "node ./tools/symlink.js tree"
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/tree/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}

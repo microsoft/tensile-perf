@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stress Test Benchmark</title>
+
+        <!-- importmap needs to be the first module to work correctly. -->
+        <%- include('./partials/importmap'); %>
+
+        <% scripts.forEach((src) => { %>
+            <script src="<%= src %>"></script>
+        <% }) %>
+        
+        <% cssSheets.forEach((href) => { %>
+            <link rel="stylesheet" href="<%= href %>">
+        <% }) %>
+
+        <%- include('./partials/getTestOptions'); %>
+        <%- include('./partials/getDomSizeMetrics'); %>
+        <%- include('./partials/postResults'); %>
+
+        
+    </head>
+    <body>
+        <div id="root"></div>
+        <%- include('./partials/runner'); %>
+    </body>
+</html>

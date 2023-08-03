@@ -1,0 +1,83 @@
+{
+  "name": "runner",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/runner/src",
+  "projectType": "library",
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "nx run runner:build",
+          "nx run runner:symlink"
+        ],
+        "parallel": false
+      }
+    },
+    "build": {
+      "executor": "@nrwl/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "dependsOn": ["^build"],
+      "options": {
+        "buildableProjectDepsInPackageJsonType": "dependencies",
+        "outputPath": "packages/runner/dist",
+        "tsConfig": "packages/runner/tsconfig.lib.json",
+        "project": "packages/runner/package.json",
+        "entryFile": "packages/runner/src/index.ts",
+        "rollupConfig": "tools/getRollupOptions.js",
+        "compiler": "babel",
+        "external": ["tslib"],
+        "format": ["esm"],
+        "skipTypeField": true,
+        "assets": [
+          {
+            "glob": "packages/runner/README.md",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "packages/runner/LICENSE.txt",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "packages/runner/src/views/",
+            "input": ".",
+            "output": "./"
+          },
+          {
+            "glob": "packages/runner/bin/stress-test.js",
+            "input": ".",
+            "output": "./bin"
+          },
+          {
+            "glob": "CONTRIBUTING.md",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "SECURITY.md",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "CODE_OF_CONDUCT.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "symlink": {
+      "command": "node ./tools/symlink.js runner"
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/runner/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}

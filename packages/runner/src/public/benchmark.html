@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stress Test Benchmark</title>
+    </head>
+    <body>
+        <div id="root"></div>
+    </body>
+    <script type="importmap">
+        {
+            "imports": {
+                "@stress-test/tools": "/dist/packages/runner/node_modules/@stress-test/tools/index.js",
+                "afterframe": "/node_modules/afterframe/dist/afterframe.module.js",
+                "random-seedable": "/node_modules/random-seedable/src/index.js"
+            }
+        }
+    </script>
+    <script type="module">
+        
+        import { injectStyles } from './dist/packages/tools/index.js';
+        import { config } from './stress-test-assets/config.js';
+        // console.log("config", config);
+
+
+        const { scripts, cssSheets } = config;
+        if (Array.isArray(scripts)) {
+            scripts.forEach(script => {
+                const scriptTag = document.createElement('script');
+                scriptTag.src = script;
+                document.head.appendChild(scriptTag);
+            });
+        }
+
+        if (Array.isArray(cssSheets)) {
+            cssSheets.forEach(css => {
+                const link = document.createElement('link');
+                link.type = "text/css";
+                link.rel = "stylesheet";
+                // link.media = "screen,print";
+                link.href = css;
+                document.head.appendChild(link);
+            });
+        }
+
+        const { fixture } = await import(`./stress-test-assets/${config.fixtureFileName}`);
+        const { renderMountTest } = await import('./dist/packages/react/index.js');
+
+        injectStyles({ selectors: fixture.selectors });
+
+        // Passing null to the tests will make them fetch the renderer name from the fixture.
+        renderMountTest({
+            fixture, 
+            itemRenderer: () => { return React.createElement('button', { children: 'test' })},
+            renderTargetSelector: '#root'
+        });
+    </script>
+</html>

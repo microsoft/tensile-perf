@@ -1,0 +1,30 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "noUnusedLocals": true,
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2019",
+    "module": "esnext",
+    "lib": ["ES2019", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "pretty": true,
+    "paths": {
+      "@stress-test/react": ["packages/react/src/index.tsx"],
+      "@stress-test/runner": ["packages/runner/src/index.ts"],
+      "@stress-test/tools": ["packages/tools/src/index.ts"],
+      "@stress-test/tree": ["packages/tree/src/index.ts"],
+      "@stress-test/web-components": ["packages/web-components/src/index.ts"]
+    },
+    "typeRoots": ["node_modules/@types", "./typings"]
+  },
+  "exclude": ["node_modules", "tmp"]
+}

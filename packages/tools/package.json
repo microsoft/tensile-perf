@@ -1,0 +1,16 @@
+{
+  "name": "@stress-test/tools",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "dependencies": {
+    "afterframe": "1.0.2",
+    "random-seedable": "1.0.8"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  }
+}

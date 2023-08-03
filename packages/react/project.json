@@ -1,0 +1,84 @@
+{
+  "name": "react",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/react/src",
+  "projectType": "library",
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "packages/react/test",
+        "commands": [
+         
+          "stress-test --config ./stress-test.config.mjs --file ./.stress-test/WrappedButton.bench.js --dev"
+        ],
+        "parallel": false
+      }
+    },
+    "build": {
+      "executor": "@nrwl/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "dependsOn": ["^build"],
+      "options": {
+        "buildableProjectDepsInPackageJsonType": "dependencies",
+        "outputPath": "packages/react/dist",
+        "tsConfig": "packages/react/tsconfig.lib.json",
+        "project": "packages/react/package.json",
+        "entryFile": "packages/react/src/index.tsx",
+        "rollupConfig": "tools/getRollupOptions.js",
+        "compiler": "babel",
+        "external": ["tslib"],
+        "format": ["esm", "cjs"],
+        "skipTypeField": true,
+        "assets": [
+          {
+            "glob": "packages/react/README.md",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "packages/react/LICENSE.txt",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "CONTRIBUTING.md",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "SECURITY.md",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "CODE_OF_CONDUCT.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/react/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "packages/react/test",
+        "commands": [
+          "webpack --mode production --entry Button.bench.tsx --config ./webpack.config.cjs",
+          "stress-test --config ./stress-test.config.mjs --file ./.stress-test/Button.bench.js",
+          "webpack --mode production --entry WrappedButton.bench.tsx --config ./webpack.config.cjs",
+          "stress-test --config ./stress-test.config.mjs --file ./.stress-test/WrappedButton.bench.js"
+        ],
+        "parallel": false
+      }
+    }
+  },
+  "tags": []
+}
