@@ -11,7 +11,7 @@ const config = {
   // Importmaps for your test.
   // See: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type/importmap
   imports: {
-    "@stress-test/web-components": "/node_modules/@stress-test/web-components/dist/index.js",
+    "@tensile-perf/web-components": "/node_modules/@tensile-perf/web-components/dist/index.js",
   },
 };
 

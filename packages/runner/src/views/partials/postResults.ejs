@@ -38,8 +38,8 @@
     };
 
     const onTestComplete = async ({ testFixture, testFile, testType, testParameters, testMetrics }) => {
-        const javascriptTime = await getEntry('stress-test-javascript');
-        const layoutTime = await getEntry('stress-test-layout');
+        const javascriptTime = await getEntry('tensile-javascript');
+        const layoutTime = await getEntry('tensile-layout');
 
         if (!javascriptTime || !layoutTime) {
             window.tachometerResult = -1;

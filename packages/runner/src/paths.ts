@@ -3,25 +3,27 @@ import mkdirp from 'mkdirp';
 import { Config, Measurements } from './types';
 import fs from 'fs';
 
+const tensilePath = '.tensile';
+
 /**
  * Returns the path to config directory and ensures the directory exists.
  */
 export const getConfigFilePath: () => string = () => {
-    const filePath = join(process.cwd(), '.stress-test');
+    const filePath = join(process.cwd(), tensilePath);
     mkdirp.sync(filePath);
 
     return filePath;
 };
 
 export const getTachometerConfigFilePath: () => string = () => {
-    const filePath = join(process.cwd(), '.stress-test', 'tachometer');
+    const filePath = join(process.cwd(), tensilePath, 'tachometer');
     mkdirp.sync(filePath);
 
     return filePath;
 };
 
 export const getTestResultFilePath: () => string = () =>{
-    const filePath = join(process.cwd(), '.stress-test', 'results');
+    const filePath = join(process.cwd(), tensilePath, 'results');
     mkdirp.sync(filePath);
 
     return filePath;

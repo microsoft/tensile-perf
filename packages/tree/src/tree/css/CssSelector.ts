@@ -1,6 +1,6 @@
-import { getRandomUtil } from '@stress-test/tools';
+import { getRandomUtil } from '@tensile-perf/tools';
 import type { CssSelectorParams, CssSelectorType } from '../../types';
-import type { RandomUtil } from '@stress-test/tools';
+import type { RandomUtil } from '@tensile-perf/tools';
 
 export const DEFAULT_SELECTOR_TYPES = [
   'class',

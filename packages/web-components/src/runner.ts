@@ -1,1 +1,1 @@
-export { run } from '@stress-test/runner';
+export { run } from '@tensile-perf/runner';

@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "stress-test",
+  "npmScope": "tensile-perf",
   "neverConnectToCloud": true,
   "tasksRunnerOptions": {
     "default": {

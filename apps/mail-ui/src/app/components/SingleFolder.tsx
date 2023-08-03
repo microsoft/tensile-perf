@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { TreeNode } from '@stress-test/react';
-import type { TreeItemRenderer } from '@stress-test/react';
-import type { RandomTreeNode } from '@stress-test/tree'
+import { TreeNode } from '@tensile-perf/react';
+import type { TreeItemRenderer } from '@tensile-perf/react';
+import type { RandomTreeNode } from '@tensile-perf/tree'
 
 // Folder Item component. There will be more parent components to this.
 export const SingleFolderComponent: TreeItemRenderer<RandomTreeNode<unknown>> = (props) => {

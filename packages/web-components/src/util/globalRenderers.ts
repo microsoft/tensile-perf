@@ -1,7 +1,7 @@
 import { TreeItemRenderer } from "../types";
 
 export const getTestRenderer = <T>(renderer: string): TreeItemRenderer<T> | null => {
-  const renderers = window.__STRESS_TEST__?.renderers;
+  const renderers = window.__TENSILE__?.renderers;
 
   if (!renderers) {
     return null;
@@ -17,11 +17,11 @@ export const getTestRenderer = <T>(renderer: string): TreeItemRenderer<T> | null
 };
 
 export const setTestRenderer = <T>(name: string, renderer: TreeItemRenderer<T>): void => {
-  window.__STRESS_TEST__?.renderers?.set(name, renderer);
+  window.__TENSILE__?.renderers?.set(name, renderer);
 };
 
 export const appendTestRenderers = (renderers: Map<string, unknown>): void => {
   for (const [name, renderer] of renderers) {
-    window.__STRESS_TEST__?.renderers?.set(name, renderer);
+    window.__TENSILE__?.renderers?.set(name, renderer);
   }
 };

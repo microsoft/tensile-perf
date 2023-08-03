@@ -19,7 +19,7 @@ const defaultConfig: ConfigFile = {
     // Importmaps for your test.
     // See: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type/importmap
     imports: {
-        "@stress-test/tools": "/node_modules/@stress-test/tools/dist/index.js",
+        "@tensile-perf/tools": "/node_modules/@tensile-perf/tools/dist/index.js",
         "afterframe": "/node_modules/afterframe/dist/afterframe.module.js",
         "random-seedable": "/node_modules/random-seedable/src/index.js",
     },

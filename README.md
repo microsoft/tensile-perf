@@ -1,10 +1,10 @@
-# Stress Test
+# Tensile
 
 A tool that generates large, stressful DOM and CSS for benchmarking.
 
 ## Usage
 
-While there are several [packages](./packages) in this monorepo there are two of primary interest for folks looking to stress test UI components:
+While there are several [packages](./packages) in this monorepo there are two of primary interest for folks looking to performance test UI components:
 
 1. [React](./packages/react/README.md)
 2. [Web Components/Vanilla HTML](./packages/web-components/README.md)

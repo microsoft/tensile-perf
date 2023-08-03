@@ -1,6 +1,6 @@
-# @stress-test/web-components
+# @tensile-perf/web-components
 
-Web Component and native HTML bindings for Stress Test.
+Web Component and native HTML bindings for Tensile.
 
 Use this if you are working with Web Components or plain HTML/CSS/Javascript.
 
@@ -10,10 +10,10 @@ Install the package:
 
 ```shell
 # with npm
-$ npm install --save-dev @stress-test/web-components
+$ npm install --save-dev @tensile-perf/web-components
 
 # or with yarn
-$ yarn add -D @stress-test/web-components
+$ yarn add -D @tensile-perf/web-components
 ```
 
 Create a benchmark test file:
@@ -28,7 +28,7 @@ const itemRenderer = (): HTMLElement => {
 };
 
 export default itemRenderer;
-export { tests } from '@stress-test/web-components';
+export { tests } from '@tensile-perf/web-components';
 ```
 
 Transpile your TS to JS in ES module format (more on this below)
@@ -36,10 +36,10 @@ Transpile your TS to JS in ES module format (more on this below)
 Run your test:
 
 ```shell
-$ stress-test --file button.bench.js
+$ tensile --file button.bench.js
 ```
 
-Review results in the `.stress-test/` folder
+Review results in the `.tensile/` folder
 
 ### Advanced configuration
 
@@ -47,7 +47,7 @@ TODO
 
 ### ES modules
 
-The [test runner](../runner/README.md) loads all Javascript test files as ES modules meaning all files under test must be loadable in a browsers as native ES modules. Because there are many bundlers and transpilers available (or maybe you write code as native ESM!), `stress-test` doesn't prescribe how you get your code into this format.
+The [test runner](../runner/README.md) loads all Javascript test files as ES modules meaning all files under test must be loadable in a browsers as native ES modules. Because there are many bundlers and transpilers available (or maybe you write code as native ESM!), `tensile` doesn't prescribe how you get your code into this format.
 
 Rollup is a popular bundler that supports exporting ESM.
 

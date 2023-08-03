@@ -18,11 +18,11 @@
     "baseUrl": ".",
     "pretty": true,
     "paths": {
-      "@stress-test/react": ["packages/react/src/index.tsx"],
-      "@stress-test/runner": ["packages/runner/src/index.ts"],
-      "@stress-test/tools": ["packages/tools/src/index.ts"],
-      "@stress-test/tree": ["packages/tree/src/index.ts"],
-      "@stress-test/web-components": ["packages/web-components/src/index.ts"]
+      "@tensile-perf/react": ["packages/react/src/index.tsx"],
+      "@tensile-perf/runner": ["packages/runner/src/index.ts"],
+      "@tensile-perf/tools": ["packages/tools/src/index.ts"],
+      "@tensile-perf/tree": ["packages/tree/src/index.ts"],
+      "@tensile-perf/web-components": ["packages/web-components/src/index.ts"]
     },
     "typeRoots": ["node_modules/@types", "./typings"]
   },

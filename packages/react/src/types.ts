@@ -1,4 +1,4 @@
-import type { RandomTreeNode, RandomTreeSelectorNode, SelectorTreeNode } from '@stress-test/tree'
+import type { RandomTreeNode, RandomTreeSelectorNode, SelectorTreeNode } from '@tensile-perf/tree'
 
 export type ReactSelectorTreeComponentRenderer = (node: SelectorTreeNode, depth: number, index: number) => JSX.Element;
 

@@ -1,14 +1,14 @@
 <script type="module">
 
-    import { injectStyles } from '@stress-test/tools';
-    import { config } from './stress-test-assets/config.js';
+    import { injectStyles } from '@tensile-perf/tools';
+    import { config } from './tensile-assets/config.js';
 
     const { testFixture, testFile, testType } = getTestOptions(config);
 
-    const { fixture } = await import(`./stress-test-assets/${testFixture}`);
+    const { fixture } = await import(`./tensile-assets/${testFixture}`);
     injectStyles({ selectors: fixture.selectors });
 
-    const { default: itemRenderer, tests } = await import(`./stress-test-file/${testFile}`);
+    const { default: itemRenderer, tests } = await import(`./tensile-file/${testFile}`);
     console.log("config", config);
 
     tests[testType]({

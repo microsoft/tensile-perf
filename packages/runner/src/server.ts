@@ -83,8 +83,8 @@ export const startServer = (config: Config) => {
       res.render('benchmark', {...config});
     });
 
-    app.use("/stress-test-file", express.static(join(process.cwd(), baseDirectory(config.file))));
-    app.use("/stress-test-assets", express.static(join(process.cwd(), ".stress-test")));
+    app.use("/tensile-file", express.static(join(process.cwd(), baseDirectory(config.file))));
+    app.use("/tensile-assets", express.static(join(process.cwd(), ".tensile")));
     app.use("/dist", express.static(join(process.cwd(), "dist")));
 
     // We might be running our script for a sub-package in a monorepo.
@@ -114,7 +114,7 @@ export const startServer = (config: Config) => {
     process.on('uncaughtException', handleGracefulShutdown);
 
     server = app.listen(port, () => {
-        console.log("stress-test server started!");
+        console.log("tensile server started!");
     });
 };
 

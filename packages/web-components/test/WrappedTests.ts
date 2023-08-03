@@ -1,5 +1,5 @@
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
-import { tests } from '@stress-test/web-components';
+import { tests } from '@tensile-perf/web-components';
 import { webLightTheme  } from '@fluentui/tokens';
 import { DesignToken } from "@microsoft/fast-foundation";
 import { setTheme } from "@fluentui/web-components";

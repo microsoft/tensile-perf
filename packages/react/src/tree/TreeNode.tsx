@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useTestRenderer } from '../context/TestRendererContext';
 import type { TreeItemRenderer, TreeNodeProps } from '../types';
-import type { Attribute, RandomTreeNode } from '@stress-test/tree';
+import type { Attribute, RandomTreeNode } from '@tensile-perf/tree';
 
 type TreeValue = {
   classNames?: string[];

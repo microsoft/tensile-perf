@@ -1,8 +1,8 @@
-# @stress-test/tools
+# @tensile-perf/tools
 
-Shared tools for Stress Test.
+Shared tools for Tensile.
 
-This package is meant for library authors and isn't generally meant to be used by people running stress tests.
+This package is meant for library authors and isn't generally meant to be used by people running Tensile tests.
 
 ## Usage
 
@@ -10,10 +10,10 @@ Install the package:
 
 ```shell
 # with npm
-$ npm install --save-dev @stress-test/tools
+$ npm install --save-dev @tensile-perf/tools
 
 # or with yarn
-$ yarn add -D @stress-test/tools
+$ yarn add -D @tensile-perf/tools
 ```
 
 ## Building

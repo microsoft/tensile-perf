@@ -22,7 +22,7 @@ const packages = {
 };
 
 const distRoot = join(process.cwd(), 'dist', 'packages');
-const runnerPackageRoot = join(distRoot, targetPackage, 'node_modules', '@stress-test');
+const runnerPackageRoot = join(distRoot, targetPackage, 'node_modules', '@tensile-perf');
 
 mkdirpSync(runnerPackageRoot);
 

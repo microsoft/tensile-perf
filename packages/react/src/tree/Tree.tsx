@@ -1,5 +1,5 @@
 import * as React from 'react';
-import type { RandomTreeNode } from '@stress-test/tree'
+import type { RandomTreeNode } from '@tensile-perf/tree'
 import type { TreeProps } from '../types';
 import { TreeNode, generateDefaultNode } from './TreeNode';
 import { useTestRendererContext } from '../context/TestRendererContext';

@@ -1,8 +1,8 @@
-import { RandomTreeNode } from "@stress-test/tree";
+import { RandomTreeNode } from "@tensile-perf/tree";
 
 declare global {
   interface Window {
-    __STRESS_TEST__: {
+    __TENSILE__: {
       renderers?: Map<string, unknown>;
     }
   }

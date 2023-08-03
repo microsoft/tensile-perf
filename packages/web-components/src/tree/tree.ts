@@ -1,7 +1,7 @@
 import { ensureTestGlobals } from "../util/ensureTestGlobals";
 import { generateDefaultNode, treeNode } from "./treeNode";
 import { appendTestRenderers, getTestRenderer, setTestRenderer } from "../util/globalRenderers";
-import type { RandomTreeNode } from "@stress-test/tree";
+import type { RandomTreeNode } from "@tensile-perf/tree";
 import type { TreeAttrs } from "../types";
 
 

@@ -1,13 +1,13 @@
 {
-  "name": "@stress-test/web-components",
+  "name": "@tensile-perf/web-components",
   "version": "0.1.5",
   "types": "./dist/src/index.d.ts",
   "module": "./dist/index.js",
   "type": "module",
   "dependencies": {
-    "@stress-test/runner": "0.3.3",
-    "@stress-test/tree": "0.1.0",
-    "@stress-test/tools": "0.1.0",
+    "@tensile-perf/runner": "0.3.3",
+    "@tensile-perf/tree": "0.1.0",
+    "@tensile-perf/tools": "0.1.0",
     "tslib": "^2.5.0"
   },
   "devDependencies": {

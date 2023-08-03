@@ -8,4 +8,4 @@ const itemRenderer = (): HTMLElement => {
 
 export default itemRenderer;
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
-export { tests } from '@stress-test/web-components';
+export { tests } from '@tensile-perf/web-components';

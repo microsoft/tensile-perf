@@ -1,10 +1,10 @@
 {
-  "name": "@stress-test/tree",
+  "name": "@tensile-perf/tree",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/index.js",
   "dependencies": {
-    "@stress-test/tools": "0.1.0"
+    "@tensile-perf/tools": "0.1.0"
   },
   "exports": {
     ".": {

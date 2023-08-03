@@ -12,7 +12,7 @@ export default [
     {
         output: [
             {
-                dir: './.stress-test',
+                dir: './.tensile',
                 format: "esm",
                 // plugins: [terser()],
                 sourcemap: true,
