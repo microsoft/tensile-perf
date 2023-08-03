@@ -1,0 +1,94 @@
+<script>
+    const postResults = async (data) => {
+        let url = getTestOption('url') ?? window.location.host;
+        if (!url.startsWith('http')) {
+            url = `${window.location.protocol}//${url}`;
+        }
+
+        url += '/v1/measurements';
+
+        const response = await fetch(url, {
+            method: 'POST',
+            cache: 'no-cache',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data),
+        });
+
+        return response.text();
+    };
+
+    const waitFor = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+    /**
+        * Get performance entries with retry.
+        * Layout is an async measure so it may not immediately be available.
+        */
+    const getEntry = async (name) => {
+        const maxTries = 10;
+        for (let tries = 0; tries < maxTries; tries++) {
+            const entries = performance.getEntriesByName(name);
+            if (entries.length > 0) {
+                return entries[0];
+            }
+
+            await waitFor(tries * 20);
+        }
+    };
+
+    const onTestComplete = async ({ testFixture, testFile, testType, testParameters, testMetrics }) => {
+        const javascriptTime = await getEntry('stress-test-javascript');
+        const layoutTime = await getEntry('stress-test-layout');
+
+        if (!javascriptTime || !layoutTime) {
+            window.tachometerResult = -1;
+            return;
+        }
+
+        const data = {
+            testFixture,
+            testFile,
+            testType,
+            testParameters,
+            javascriptTime: javascriptTime.duration,
+            layoutTime: layoutTime.duration
+        };
+
+        if (testMetrics.memory && window.crossOriginIsolated && performance.measureUserAgentSpecificMemory) {
+            try {
+                const memory = await performance.measureUserAgentSpecificMemory();
+                data.memory = memory.bytes;
+            } catch (err) {
+                console.error('Unable to retrieve memory usage', err);
+                data.memory = 0;
+            }
+        } else {
+            data.memory = 0;
+        }
+
+        if (testMetrics.domSize) {
+            data.domSize = document.querySelectorAll('*').length;
+            const { lightDomSize, shadowDomSize, totalDomSize, maxLightBreadth, maxLightDepth, maxShadowBreadth, maxShadowDepth } = getDomSizeMetrics();
+            data.lightDomSize = lightDomSize;
+            data.shadowDomSize = shadowDomSize;
+            data.totalDomSize = totalDomSize;
+            data.maxLightBreadth = maxLightBreadth;
+            data.maxLightDepth = maxLightDepth;
+            data.maxShadowBreadth = maxShadowBreadth;
+            data.maxShadowDepth = maxShadowDepth;
+        } else {
+            data.lightDomSize = 0;
+            data.shadowDomSize = 0;
+            data.totalDomSize = 0;
+            data.maxLightBreadth = 0;
+            data.maxLightDepth = 0;
+            data.maxShadowBreadth = 0;
+            data.maxShadowDepth = 0;
+        }
+
+        const result = await postResults(data);
+
+        window.tachometerResult = data.javascriptTime + data.layoutTime;
+    };
+</script>

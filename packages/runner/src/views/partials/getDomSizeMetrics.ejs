@@ -1,0 +1,55 @@
+<script>
+    const getDomSizeMetrics = () => {
+        const metrics = {
+            lightDomSize: 0,
+            shadowDomSize: 0,
+            maxLightBreadth: 0,
+            maxLightDepth: 0,
+            maxShadowBreadth: 0,
+            maxShadowDepth: 0,
+        };
+
+        const walkTree = (root, depth, metrics, isShadowDom = false) => {
+            const walker = document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT);
+
+            let prev = root;
+            let node = walker.nextNode();
+            while (node) {
+                metrics[isShadowDom ? 'shadowDomSize' : 'lightDomSize']++;
+                if (node.shadowRoot) {
+                    walkTree(node.shadowRoot, 0, metrics, true);
+                }
+
+                if (node.parentElement === prev || node.parentElement === null) {
+                    depth++;
+                } else if (node.previousElementSibling?.contains(prev)) {
+                    let depthNode = prev;
+                    while (depthNode !== node.previousElementSibling) {
+                        depthNode = depthNode.parentElement;
+                        depth--;
+                    }
+                }
+
+                if (isShadowDom) {
+                    metrics.maxShadowBreadth = Math.max(metrics.maxShadowBreadth, node.children.length);
+                    metrics.maxShadowDepth = Math.max(metrics.maxShadowDepth, depth);
+                } else {
+                    metrics.maxLightBreadth = Math.max(metrics.maxLightBreadth, node.children.length);
+                    metrics.maxLightDepth = Math.max(metrics.maxLightDepth, depth);
+                }
+
+                prev = node;
+                node = walker.nextNode();
+            }
+        };
+
+        walkTree(document, 0, metrics);
+
+        console.table(metrics);
+
+        return {
+            ...metrics,
+            totalDomSize: metrics.lightDomSize + metrics.shadowDomSize
+        };
+    };
+</script>

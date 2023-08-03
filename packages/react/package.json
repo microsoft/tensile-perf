@@ -1,0 +1,29 @@
+{
+  "name": "@stress-test/react",
+  "version": "0.1.5",
+  "module": "./dist/index.js",
+  "type": "module",
+  "dependencies": {
+    "@stress-test/runner": "0.3.3",
+    "@stress-test/tree": "0.1.0",
+    "@stress-test/tools": "0.1.0",
+    "use-context-selector": "1.4.1",
+    "tslib": "^2.5.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@stress-test/web-components",
+  "version": "0.1.5",
+  "types": "./dist/src/index.d.ts",
+  "module": "./dist/index.js",
+  "type": "module",
+  "dependencies": {
+    "@stress-test/runner": "0.3.3",
+    "@stress-test/tree": "0.1.0",
+    "@stress-test/tools": "0.1.0",
+    "tslib": "^2.5.0"
+  },
+  "devDependencies": {
+    "@fluentui/tokens": "1.0.0-alpha.2",
+    "@fluentui/web-components": "3.0.0-alpha.24",
+    "@microsoft/fast-element": "2.0.0-beta.23",
+    "@microsoft/fast-foundation": "3.0.0-alpha.27",
+    "@rollup/plugin-commonjs": "25.0.2",
+    "@rollup/plugin-node-resolve": "15.1.0",
+    "@rollup/plugin-terser": "0.4.3",
+    "@rollup/plugin-typescript": "11.1.2",
+    "rollup": "3.26.0",
+    "rollup-plugin-transform-tagged-template": "0.0.3"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./runner": {
+      "types": "./dist/src/runner.d.ts",
+      "default": "./dist/runner.js"
+    }
+  }
+}

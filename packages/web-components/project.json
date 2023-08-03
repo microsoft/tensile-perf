@@ -1,0 +1,86 @@
+{
+  "name": "web-components",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/web-components/src",
+  "projectType": "library",
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "packages/web-components/test",
+        "args": "--skip-nx-cache",
+        "commands": [
+          "rollup --input ./FASTButton.bench.ts --config ./rollup.config.mjs",
+          "stress-test --config ./stress-test.config.mjs --file ./.stress-test/FASTButton.bench.js --dev"
+        ],
+        "parallel": false
+      }
+    },
+    "build": {
+      "executor": "@nrwl/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "dependsOn": ["^build"],
+      "options": {
+        "buildableProjectDepsInPackageJsonType": "dependencies",
+        "outputPath": "packages/web-components/dist",
+        "tsConfig": "packages/web-components/tsconfig.lib.json",
+        "project": "packages/web-components/package.json",
+        "entryFile": "packages/web-components/src/index.ts",
+        "rollupConfig": "tools/getRollupOptions.js",
+        "compiler": "babel",
+        "external": ["tslib"],
+        "format": ["esm"],
+        "skipTypeField": true,
+        "assets": [
+          {
+            "glob": "packages/web-components/README.md",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "packages/web-components/LICENSE.txt",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "CONTRIBUTING.md",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "SECURITY.md",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "CODE_OF_CONDUCT.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/web-components/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "packages/web-components/test",
+        "args": "--skip-nx-cache",
+        "commands": [
+          "rollup --input ./Button.bench.ts --config ./rollup.config.mjs",
+          "stress-test --config ./stress-test.config.mjs --file ./.stress-test/Button.bench.js",
+          "rollup --input ./FASTButton.bench.ts --config ./rollup.config.mjs",
+          "stress-test --config ./stress-test.config.mjs --file ./.stress-test/FASTButton.bench.js"
+        ],
+        "parallel": false
+      }
+    }
+  },
+  "tags": []
+}

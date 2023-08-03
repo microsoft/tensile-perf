@@ -1,0 +1,24 @@
+<script>
+    const testOptions = new URLSearchParams(window.location.search);
+    const getTestOption = (option) => {
+        return testOptions.get(option);
+    };
+
+    const getTestOptions = (config) => {
+        let testFixture = getTestOption('fixture') ?? config.fixtureFileName;
+        if (!testFixture.startsWith('fixture__')) {
+            testFixture = `fixture__${testFixture}`;
+        }
+
+        if (!testFixture.endsWith('.js')) {
+            testFixture = `${testFixture}.js`;
+        }
+
+        const testFile = getTestOption('file') ?? config.testFile;
+
+        const testType = getTestOption('test') ?? config.test;
+
+        return { testFixture, testFile, testType };
+    }
+
+</script>
