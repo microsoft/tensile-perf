@@ -6,4 +6,4 @@ const itemRenderer: React.FC = () => {
 
 export default itemRenderer;
 
-export { tests } from "@stress-test/react";
+export { tests } from "@tensile-perf/react";

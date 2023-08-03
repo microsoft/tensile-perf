@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { measureJavascript, measureLayout } from '@stress-test/tools';
+import { measureJavascript, measureLayout } from '@tensile-perf/tools';
 
 // Probably won't use this but leaving it for reference for now
 // export const usePerformanceMeasure = () => {

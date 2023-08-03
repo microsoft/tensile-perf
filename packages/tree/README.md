@@ -1,8 +1,8 @@
-# @stress-test/tree
+# @tensile-perf/tree
 
 Library for building trees meant to be rendered as DOM.
 
-This package is meant for library authors and isn't generally meant to be used by people running stress tests.
+This package is meant for library authors and isn't generally meant to be used by people running Tensile tests.
 
 ## Usage
 
@@ -10,10 +10,10 @@ Install the package:
 
 ```shell
 # with npm
-$ npm install --save-dev @stress-test/tree
+$ npm install --save-dev @tensile-perf/tree
 
 # or with yarn
-$ yarn add -D @stress-test/tree
+$ yarn add -D @tensile-perf/tree
 ```
 
 ## Building

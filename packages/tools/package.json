@@ -1,5 +1,5 @@
 {
-  "name": "@stress-test/tools",
+  "name": "@tensile-perf/tools",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/index.js",

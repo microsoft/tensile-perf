@@ -46,7 +46,7 @@
             "output": "./"
           },
           {
-            "glob": "packages/runner/bin/stress-test.js",
+            "glob": "packages/runner/bin/tensile.js",
             "input": ".",
             "output": "./bin"
           },

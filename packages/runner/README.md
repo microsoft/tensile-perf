@@ -1,6 +1,6 @@
-# @stress-test/runner
+# @tensile-perf/runner
 
-The application that runs Stress Tests tests. This application spins up a server, runs code and collects the results.
+The application that runs Tensile tests. This application spins up a server, runs code and collects the results.
 
 ## Usage
 
@@ -8,10 +8,10 @@ Install the package:
 
 ```shell
 # with npm
-$ npm install --save-dev @stress-test/runner
+$ npm install --save-dev @tensile-perf/runner
 
 # or with yarn
-$ yarn add -D @stress-test/runner
+$ yarn add -D @tensile-perf/runner
 ```
 
 Create a benchmark test file:
@@ -26,16 +26,16 @@ const itemRenderer = () => {
 };
 
 export default itemRenderer;
-export { tests } from '@stress-test/web-components';
+export { tests } from '@tensile-perf/web-components';
 ```
 
 Run your test:
 
 ```shell
-$ stress-test --file button.bench.js
+$ tensile --file button.bench.js
 ```
 
-Review results in the `.stress-test/` folder
+Review results in the `.tensile/` folder
 
 ### Advanced configuration
 
@@ -46,7 +46,7 @@ TODO
 Use the CLI for help documentation:
 
 ```shell
-$ stress-test help
+$ tensile help
 ```
 
 ## Building

@@ -1,4 +1,4 @@
-import type { Attribute, RandomTreeNode } from '@stress-test/tree';
+import type { Attribute, RandomTreeNode } from '@tensile-perf/tree';
 import { TreeItemRenderer, TreeNodeAttrs } from '../types';
 import { getTestRenderer } from '../util/globalRenderers';
 

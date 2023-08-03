@@ -42,6 +42,6 @@ testem.log
 Thumbs.db
 
 # Tooling Files
-.stress-test/
+.tensile/
 
 /test.js

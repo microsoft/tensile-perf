@@ -1,7 +1,7 @@
 import afterframe from 'afterframe';
 import type { LayoutMeasureFn } from '../types';
 
-export const measureLayout: LayoutMeasureFn = (measureName = 'stress-test-layout', startMark = 'stress-test-start-layout') => {
+export const measureLayout: LayoutMeasureFn = (measureName = 'tensile-layout', startMark = 'tensile-start-layout') => {
   performance.mark(startMark);
 
   afterframe(() => {

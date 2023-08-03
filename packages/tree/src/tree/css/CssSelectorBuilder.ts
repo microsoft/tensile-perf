@@ -1,7 +1,7 @@
-import { getRandomUtil } from "@stress-test/tools";
+import { getRandomUtil } from "@tensile-perf/tools";
 import { CssSelector } from "./CssSelector";
 import type { Attribute, CssSelectorChances, CssSelectorTreeParams, RandomTreeNode, RandomTreeSelectorNode } from "../../types";
-import type { RandomUtil } from "@stress-test/tools";
+import type { RandomUtil } from "@tensile-perf/tools";
 
 const DEFAULT_SELECTOR_CHANCES: CssSelectorChances = {
   not: 0.05,

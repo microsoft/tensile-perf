@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { Tree } from '@stress-test/react';
-import { injectStyles } from '@stress-test/tools';
+import { Tree } from '@tensile-perf/react';
+import { injectStyles } from '@tensile-perf/tools';
 
 import { MailUI } from './components/MailUI';
 import { SingleFolderComponent } from './components/SingleFolder';

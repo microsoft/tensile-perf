@@ -1,4 +1,4 @@
-import { measureJavascript, measureLayout } from "@stress-test/tools";
+import { measureJavascript, measureLayout } from "@tensile-perf/tools";
 
 export const measurePerformance = () => {
   let startTime: number;

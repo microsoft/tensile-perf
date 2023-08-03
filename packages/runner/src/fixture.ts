@@ -1,5 +1,5 @@
-import { cssSelectorTreeCreator, RandomTreeBuilder } from '@stress-test/tree';
-import type { RandomTreeSelectorNode } from '@stress-test/tree';
+import { cssSelectorTreeCreator, RandomTreeBuilder } from '@tensile-perf/tree';
+import type { RandomTreeSelectorNode } from '@tensile-perf/tree';
 
 import fs from 'fs';
 import { join } from 'path';

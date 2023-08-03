@@ -11,7 +11,7 @@ const config = {
   // Number of test runs
   numRuns: 2,
 
-  extends: "./stress-test.base.mjs"
+  extends: "./tensile.base.mjs"
 };
 
 // module.exports = config;

@@ -11,7 +11,7 @@
         "args": "--skip-nx-cache",
         "commands": [
           "rollup --input ./FASTButton.bench.ts --config ./rollup.config.mjs",
-          "stress-test --config ./stress-test.config.mjs --file ./.stress-test/FASTButton.bench.js --dev"
+          "tensile --config ./tensile.config.mjs --file ./.tensile/FASTButton.bench.js --dev"
         ],
         "parallel": false
       }
@@ -74,9 +74,9 @@
         "args": "--skip-nx-cache",
         "commands": [
           "rollup --input ./Button.bench.ts --config ./rollup.config.mjs",
-          "stress-test --config ./stress-test.config.mjs --file ./.stress-test/Button.bench.js",
+          "tensile --config ./tensile.config.mjs --file ./.tensile/Button.bench.js",
           "rollup --input ./FASTButton.bench.ts --config ./rollup.config.mjs",
-          "stress-test --config ./stress-test.config.mjs --file ./.stress-test/FASTButton.bench.js"
+          "tensile --config ./tensile.config.mjs --file ./.tensile/FASTButton.bench.js"
         ],
         "parallel": false
       }

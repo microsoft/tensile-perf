@@ -1,5 +1,5 @@
 {
-  "name": "stress-test-repository",
+  "name": "tensile-perf-repository",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -14,7 +14,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/spmonahan/stress-test"
+    "url": "https://github.com/microsoft/tensile-perf"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -22,14 +22,14 @@
     "@babel/preset-typescript": "^7.21.4",
     "@fluentui/react-components": "^9.19.1",
     "@griffel/babel-preset": "^1.4.13",
-    "@nrwl/cypress": "15.9.2",
+    "@nrwl/cypress": "15.8.2",
     "@nrwl/eslint-plugin-nx": "15.8.2",
-    "@nrwl/js": "^15.9.2",
+    "@nrwl/js": "15.8.2",
     "@nrwl/linter": "15.8.2",
     "@nrwl/nx-cloud": "latest",
-    "@nrwl/react": "^15.9.2",
-    "@nrwl/rollup": "^15.8.6",
-    "@nrwl/vite": "15.9.2",
+    "@nrwl/react": "15.8.2",
+    "@nrwl/rollup": "15.8.2",
+    "@nrwl/vite": "15.8.2",
     "@nrwl/workspace": "15.8.2",
     "@rollup/plugin-node-resolve": "15.1.0",
     "@rollup/plugin-replace": "^5.0.2",

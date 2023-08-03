@@ -1,6 +1,6 @@
 import type{ RandomTreeBuilderParams, RandomTreeNode, RandomTreeNodeCreateCallback } from '../types';
-import { getRandomUtil } from '@stress-test/tools';
-import type { RandomUtil } from '@stress-test/tools';
+import { getRandomUtil } from '@tensile-perf/tools';
+import type { RandomUtil } from '@tensile-perf/tools';
 
 
 export class RandomTreeBuilder<T> {

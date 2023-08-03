@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { TestApp, tests } from '@stress-test/react';
-import type { TestRenderParams } from '@stress-test/react';
+import { TestApp, tests } from '@tensile-perf/react';
+import type { TestRenderParams } from '@tensile-perf/react';
 
 export type TestContextValue = {
   label: string;

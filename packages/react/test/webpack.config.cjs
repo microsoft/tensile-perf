@@ -1,6 +1,6 @@
 const path = require('path');
 
-const stressTestPath = '.stress-test';
+const tensilePath = '.tensile';
 
 // A Webpack config that produces an ES module library
 module.exports = (env, argv) => {
@@ -10,7 +10,7 @@ module.exports = (env, argv) => {
   }
 
   const entry = entries[0];
-  const outputFilename = path.join(stressTestPath, entry.replace(path.extname(entry), '.js'));
+  const outputFilename = path.join(tensilePath, entry.replace(path.extname(entry), '.js'));
 
   const config = {
     mode,

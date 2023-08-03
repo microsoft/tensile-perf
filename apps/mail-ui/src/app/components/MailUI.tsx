@@ -1,7 +1,7 @@
 import * as React from 'react';
-import type { TreeItemRenderer } from '@stress-test/react';
-import type { RandomTreeNode } from '@stress-test/tree'
-import { TreeNode } from '@stress-test/react';
+import type { TreeItemRenderer } from '@tensile-perf/react';
+import type { RandomTreeNode } from '@tensile-perf/tree'
+import { TreeNode } from '@tensile-perf/react';
 import { SingleFolderComponent } from './SingleFolder';
 
 import './MailUI.css';

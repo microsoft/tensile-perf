@@ -1,8 +1,8 @@
 export type GetProfilerOnRender = () => React.ProfilerOnRenderCallback;
-import { measureLayout } from '@stress-test/tools';
+import { measureLayout } from '@tensile-perf/tools';
 
 // Leaving this here because it was useful/needed in the previous
-// version of stress-test but I cannot recall why.
+// version of tensile but I cannot recall why.
 // export const getProfilerOnRender: GetProfilerOnRender = () => {
 //     let start: number;
 //     let timeoutId: number;
@@ -32,7 +32,7 @@ import { measureLayout } from '@stress-test/tools';
 // };
 
 export const profilerOnRender: React.ProfilerOnRenderCallback = (_profilerId, _mode, _actualTime, _baseTime, startTime, _commitTime) => {
-  performance.measure('stress-test-javascript', {
+  performance.measure('tensile-javascript', {
     start: startTime,
     end: performance.now()
   });

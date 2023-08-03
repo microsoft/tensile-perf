@@ -1,6 +1,6 @@
-# @stress-test/react
+# @tensile-perf/react
 
-React bindings for Stress Test.
+React bindings for Tensile.
 
 ## Usage
 
@@ -8,10 +8,10 @@ Install the package:
 
 ```shell
 # with npm
-$ npm install --save-dev @stress-test/react
+$ npm install --save-dev @tensile-perf/react
 
 # or with yarn
-$ yarn add -D @stress-test/react
+$ yarn add -D @tensile-perf/react
 ```
 
 Create a benchmark test file:
@@ -26,7 +26,7 @@ const itemRenderer: React.FC = () => {
 
 export default itemRenderer;
 
-export { tests } from "@stress-test/react";
+export { tests } from "@tensile-perf/react";
 ```
 
 Transpile your TSX to JS in ES module format (more on this below)
@@ -34,10 +34,10 @@ Transpile your TSX to JS in ES module format (more on this below)
 Run your test:
 
 ```shell
-$ stress-test --file button.bench.js
+$ tensile --file button.bench.js
 ```
 
-Review results in the `.stress-test/` folder
+Review results in the `.tensile/` folder
 
 ### Advanced configuration
 
@@ -45,7 +45,7 @@ TODO
 
 ### ES modules
 
-The [test runner](../runner/README.md) loads all Javascript test files as ES modules meaning all files under test must be loadable in a browsers as native ES modules. Because there are many bundlers and transpilers available (or maybe you write code as native ESM!), `stress-test` doesn't prescribe how you get your code into this format.
+The [test runner](../runner/README.md) loads all Javascript test files as ES modules meaning all files under test must be loadable in a browsers as native ES modules. Because there are many bundlers and transpilers available (or maybe you write code as native ESM!), `tensile` doesn't prescribe how you get your code into this format.
 
 Webpack is a popular bundler in the React world that supports exporting ESM via the experimental [`outputModule`](https://webpack.js.org/configuration/experiments/#experimentsoutputmodule) configuration option.
 

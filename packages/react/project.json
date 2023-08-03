@@ -9,8 +9,7 @@
       "options": {
         "cwd": "packages/react/test",
         "commands": [
-         
-          "stress-test --config ./stress-test.config.mjs --file ./.stress-test/WrappedButton.bench.js --dev"
+          "tensile --config ./tensile.config.mjs --file ./.tensile/WrappedButton.bench.js --dev"
         ],
         "parallel": false
       }
@@ -72,9 +71,9 @@
         "cwd": "packages/react/test",
         "commands": [
           "webpack --mode production --entry Button.bench.tsx --config ./webpack.config.cjs",
-          "stress-test --config ./stress-test.config.mjs --file ./.stress-test/Button.bench.js",
+          "tensile --config ./tensile.config.mjs --file ./.tensile/Button.bench.js",
           "webpack --mode production --entry WrappedButton.bench.tsx --config ./webpack.config.cjs",
-          "stress-test --config ./stress-test.config.mjs --file ./.stress-test/WrappedButton.bench.js"
+          "tensile --config ./tensile.config.mjs --file ./.tensile/WrappedButton.bench.js"
         ],
         "parallel": false
       }

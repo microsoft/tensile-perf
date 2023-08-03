@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Stress Test Benchmark</title>
+        <title>Tensile Benchmark</title>
     </head>
     <body>
         <div id="root"></div>
@@ -9,7 +9,7 @@
     <script type="importmap">
         {
             "imports": {
-                "@stress-test/tools": "/dist/packages/runner/node_modules/@stress-test/tools/index.js",
+                "@tensile-perf/tools": "/dist/packages/runner/node_modules/@tensile-perf/tools/index.js",
                 "afterframe": "/node_modules/afterframe/dist/afterframe.module.js",
                 "random-seedable": "/node_modules/random-seedable/src/index.js"
             }
@@ -18,7 +18,7 @@
     <script type="module">
         
         import { injectStyles } from './dist/packages/tools/index.js';
-        import { config } from './stress-test-assets/config.js';
+        import { config } from './tensile-perf-assets/config.js';
         // console.log("config", config);
 
 
@@ -42,7 +42,7 @@
             });
         }
 
-        const { fixture } = await import(`./stress-test-assets/${config.fixtureFileName}`);
+        const { fixture } = await import(`./tensile-perf-assets/${config.fixtureFileName}`);
         const { renderMountTest } = await import('./dist/packages/react/index.js');
 
         injectStyles({ selectors: fixture.selectors });
