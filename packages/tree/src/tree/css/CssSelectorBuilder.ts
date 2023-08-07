@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import { getRandomUtil } from "@tensile-perf/tools";
 import { CssSelector } from "./CssSelector";
 import type { Attribute, CssSelectorChances, CssSelectorTreeParams, RandomTreeNode, RandomTreeSelectorNode } from "../../types";

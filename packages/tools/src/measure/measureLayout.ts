@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import afterframe from 'afterframe';
 import type { LayoutMeasureFn } from '../types';
 

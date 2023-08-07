@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import * as React from 'react';
 import type { RandomTreeNode } from '@tensile-perf/tree'
 import type { TreeProps } from '../types';

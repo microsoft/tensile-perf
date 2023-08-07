@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import { generateFixtureFileName, hasAllFixtureParamters, DEFAULT_FIXTURES } from "./fixture";
 import { defaultConfig } from "./defaultConfig";
 import { baseDirectory, getConfigFilePath } from "./paths";

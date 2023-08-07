@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import { ensureTestGlobals } from "../util/ensureTestGlobals";
 import { generateDefaultNode, treeNode } from "./treeNode";
 import { appendTestRenderers, getTestRenderer, setTestRenderer } from "../util/globalRenderers";

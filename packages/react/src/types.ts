@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import type { RandomTreeNode, RandomTreeSelectorNode, SelectorTreeNode } from '@tensile-perf/tree'
 
 export type ReactSelectorTreeComponentRenderer = (node: SelectorTreeNode, depth: number, index: number) => JSX.Element;

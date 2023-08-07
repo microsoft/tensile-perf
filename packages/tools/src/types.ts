@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 export type RandomUtilGetter = (seed?: number) => RandomUtil;
 export type RandomUtil = {
     coin: (pTrue: number) => boolean;

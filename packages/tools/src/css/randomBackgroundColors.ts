@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import { getRandomUtil } from "../random/random";
 import { colorNames, cssRgbaColor } from "./color";
 import type { CssNamedColor, RandomCssFromSelectorsParams } from "../types";
