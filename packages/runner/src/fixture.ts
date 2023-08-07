@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import { cssSelectorTreeCreator, RandomTreeBuilder } from '@tensile-perf/tree';
 import type { RandomTreeSelectorNode } from '@tensile-perf/tree';
 

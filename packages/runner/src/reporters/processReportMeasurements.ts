@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import { getValue, getValueMs } from './values';
 import { decimalFormatter, roundFormatter } from "./formatters";
 import type { Browser, Processor, ProcessedMeasurementData } from "../types";

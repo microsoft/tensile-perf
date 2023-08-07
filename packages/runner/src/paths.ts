@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import { basename, join, posix, sep } from 'path';
 import mkdirp from 'mkdirp';
 import { Config, Measurements } from './types';

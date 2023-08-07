@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import { measureJavascript, measureLayout } from "@tensile-perf/tools";
 
 export const measurePerformance = () => {

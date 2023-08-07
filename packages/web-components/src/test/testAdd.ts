@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import { tree } from '../tree/tree';
 import { measurePerformance } from '../util/performanceMeasure';
 import type { TestRenderFunction } from '../types';

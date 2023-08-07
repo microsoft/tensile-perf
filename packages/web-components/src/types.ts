@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import { RandomTreeNode } from "@tensile-perf/tree";
 
 declare global {

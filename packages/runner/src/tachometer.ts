@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import { main } from 'tachometer/lib/cli.js';
 import { getTachometerConfigFilePath, getTestResultFilePath } from './paths';
 import path from 'path';

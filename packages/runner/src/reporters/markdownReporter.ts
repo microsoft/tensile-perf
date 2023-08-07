@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import { markdownTable } from "markdown-table";
 import { processReportMeasurements } from "./processReportMeasurements";
 import { Reporter } from "../types";

@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import { CssSelectorBuilder } from "./CssSelectorBuilder";
 import type { CssSelectorTreeCreator, RandomTreeNodeCreateCallback, RandomTreeSelectorNode } from "../../types";
 import { CssSelector } from "./CssSelector";

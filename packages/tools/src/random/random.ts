@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import { LCG } from 'random-seedable';
 import type { RandomUtilGetter } from '../types';
 

@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import yargs from 'yargs/yargs';
 import { generateConfigFromCliParams } from './testConfig';
 import { generateFixtures } from './fixture';

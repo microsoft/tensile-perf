@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import * as React from 'react';
 import { useTestRenderer } from '../context/TestRendererContext';
 import type { TreeItemRenderer, TreeNodeProps } from '../types';

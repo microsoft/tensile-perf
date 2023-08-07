@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import Table from 'cli-table';
 import { processReportMeasurements } from "./processReportMeasurements";
 import type { Reporter } from "../types";
