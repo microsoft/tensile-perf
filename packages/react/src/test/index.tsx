@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import { renderAddTest } from "./TestAdd";
 // import { renderInvalidateTest } from "./TestInvalidate";
 import { renderMountTest } from "./TestMount";

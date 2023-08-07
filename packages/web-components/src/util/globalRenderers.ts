@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import { TreeItemRenderer } from "../types";
 
 export const getTestRenderer = <T>(renderer: string): TreeItemRenderer<T> | null => {

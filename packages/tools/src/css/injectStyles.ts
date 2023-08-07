@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import { randomBackgroundColors } from "./randomBackgroundColors";
 import type { RandomCssFromSelectorsParams } from "../types";
 

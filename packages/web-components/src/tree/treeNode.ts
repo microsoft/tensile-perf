@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import type { Attribute, RandomTreeNode } from '@tensile-perf/tree';
 import { TreeItemRenderer, TreeNodeAttrs } from '../types';
 import { getTestRenderer } from '../util/globalRenderers';

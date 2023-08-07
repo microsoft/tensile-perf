@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 export { getRandomUtil } from './random/random';
 export type { RandomUtil } from './types';
 

@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import { CssNamedColor, RgbColor } from "../types";
 
 export const colors: Record<CssNamedColor, RgbColor> = {

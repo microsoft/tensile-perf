@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 export type GetProfilerOnRender = () => React.ProfilerOnRenderCallback;
 import { measureLayout } from '@tensile-perf/tools';
 

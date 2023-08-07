@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 export { tree } from './tree/tree'
 
 export { treeNode } from './tree/treeNode'

@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT license.
+
 import express from "express";
 // eslint-disable-next-line
 import useragent from "express-useragent";
