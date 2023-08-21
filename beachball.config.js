@@ -4,6 +4,7 @@
  * @type {import('beachball').BeachballConfig}
  */
 module.exports = {
+    branch: 'origin/main',
     gitTags: false,
     ignorePatterns: [
       '**/__fixtures__/**',

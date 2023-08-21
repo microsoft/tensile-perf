@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "beachball:publish": "beachball publish",
+    "beachball:publish": "beachball publish --access public -y",
     "build": "nx run-many --targets=build --exclude mail-ui",
     "change": "beachball change",
     "check-dependencies": "syncpack list-mismatches --prod --peer",
