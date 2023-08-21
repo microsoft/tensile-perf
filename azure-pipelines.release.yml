@@ -59,34 +59,30 @@ jobs:
       #     yarn nx run-many --target=test --all --verbose --exclude mail-ui --skip-nx-cache
       #   displayName: yarn test
 
-      # - script: |
-      #     yarn publish:beachball --token $(NPM_TOKEN_TENSILE_PERF)
-      #     git reset --hard origin/main
-      #   env:
-      #     GITHUB_PAT: $(githubPAT)
-      #   displayName: Publish changes and bump versions
+      - script: |
+          yarn publish:beachball --token $(NPM_TOKEN_TENSILE_PERF)
+          git reset --hard origin/main
+        env:
+          GITHUB_PAT: $(githubPAT)
+        displayName: Publish changes and bump versions
 
-      # - task: AzureArtifacts.manifest-generator-task.manifest-generator-task.ManifestGeneratorTask@0
-      #   displayName: 📒 Generate Manifest
-      #   inputs:
-      #     BuildDropPath: $(System.DefaultWorkingDirectory)
+      - task: AzureArtifacts.manifest-generator-task.manifest-generator-task.ManifestGeneratorTask@0
+        displayName: 📒 Generate Manifest
+        inputs:
+          BuildDropPath: $(System.DefaultWorkingDirectory)
 
-      # - task: PublishPipelineArtifact@1
-      #   displayName: 📒 Publish Manifest
-      #   inputs:
-      #     artifactName: SBom-$(System.JobAttempt)
-      #     targetPath: $(System.DefaultWorkingDirectory)/_manifest
+      - task: PublishPipelineArtifact@1
+        displayName: 📒 Publish Manifest
+        inputs:
+          artifactName: SBom-$(System.JobAttempt)
+          targetPath: $(System.DefaultWorkingDirectory)/_manifest
 
       # This would usually be run automatically (via a pipeline decorator from an extension), but the
       # thorough cleanup step prevents it from working. So run it manually here.
-      # - task: ComponentGovernanceComponentDetection@0
-      #   displayName: 'Component governance detection'
-      #   inputs:
-      #     sourceScanPath: $(Agent.BuildDirectory)
-      #   condition: succeeded()
-      #   timeoutInMinutes: 5
-      #   continueOnError: true
-
-      # - template: .devops/templates/cleanup.yml
-      #   parameters:
-      #     checkForModifiedFiles: false
+      - task: ComponentGovernanceComponentDetection@0
+        displayName: 'Component governance detection'
+        inputs:
+          sourceScanPath: $(Agent.BuildDirectory)
+        condition: succeeded()
+        timeoutInMinutes: 5
+        continueOnError: true
