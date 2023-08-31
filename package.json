@@ -4,11 +4,11 @@
   "license": "MIT",
   "scripts": {
     "beachball:publish": "beachball publish --access public -y",
-    "build": "nx run-many --targets=build --exclude mail-ui",
+    "build": "nx run-many --targets=build --exclude mail-ui && nx run runner:linkbinary",
     "change": "beachball change",
     "check-dependencies": "syncpack list-mismatches --prod --peer",
     "lint": "nx affected --target=lint --exclude mail-ui",
-    "test": "nx affected --target=test --exclude mail-ui",
+    "test": "nx run-many --target=test --all --exclude mail-ui",
     "type-check": "nx affected --target=type-check --exclude mail-ui"
   },
   "private": true,
