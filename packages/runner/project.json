@@ -68,8 +68,9 @@
         ]
       }
     },
-    "symlink": {
-      "command": "node ./tools/symlink.js runner"
+    "linkbinary": {
+      "dependsOn": ["build"],
+      "command": "node ./tools/linkbinary.js"
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
