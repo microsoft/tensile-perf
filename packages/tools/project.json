@@ -7,14 +7,12 @@
     "dev": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": [
-          "nx run tools:build"
-        ],
+        "commands": ["nx run tools:build"],
         "parallel": false
       }
     },
     "build": {
-      "executor": "@nrwl/rollup:rollup",
+      "executor": "@nx/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "dependsOn": ["^build"],
       "options": {
@@ -54,11 +52,13 @@
             "input": ".",
             "output": "."
           }
-        ]
+        ],
+        "babelUpwardRootMode": true,
+        "updateBuildableProjectDepsInPackageJson": true
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["packages/tools/**/*.ts"]

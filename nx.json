@@ -4,7 +4,7 @@
   "neverConnectToCloud": true,
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/nx-cloud",
+      "runner": "nx-cloud",
       "options": {
         "cacheableOperations": ["build", "lint", "test", "e2e"],
         "accessToken": "Mzc1Y2UzZWQtYzE1YS00MmI3LWFkMzMtNzI3NTI4NzFiMzk3fHJlYWQtd3JpdGU="
@@ -45,7 +45,7 @@
     "libsDir": "packages"
   },
   "generators": {
-    "@nrwl/react": {
+    "@nx/react": {
       "application": {
         "style": "css",
         "linter": "eslint",

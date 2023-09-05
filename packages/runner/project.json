@@ -7,15 +7,12 @@
     "dev": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": [
-          "nx run runner:build",
-          "nx run runner:symlink"
-        ],
+        "commands": ["nx run runner:build", "nx run runner:symlink"],
         "parallel": false
       }
     },
     "build": {
-      "executor": "@nrwl/rollup:rollup",
+      "executor": "@nx/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "dependsOn": ["^build"],
       "options": {
@@ -65,7 +62,9 @@
             "input": ".",
             "output": "."
           }
-        ]
+        ],
+        "babelUpwardRootMode": true,
+        "updateBuildableProjectDepsInPackageJson": true
       }
     },
     "linkbinary": {
@@ -73,7 +72,7 @@
       "command": "node ./tools/linkbinary.js"
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["packages/runner/**/*.ts"]

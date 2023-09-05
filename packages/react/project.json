@@ -15,7 +15,7 @@
       }
     },
     "build": {
-      "executor": "@nrwl/rollup:rollup",
+      "executor": "@nx/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "dependsOn": ["^build"],
       "options": {
@@ -55,11 +55,13 @@
             "input": ".",
             "output": "."
           }
-        ]
+        ],
+        "babelUpwardRootMode": true,
+        "updateBuildableProjectDepsInPackageJson": true
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["packages/react/**/*.ts"]

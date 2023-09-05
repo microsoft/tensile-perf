@@ -5,7 +5,7 @@
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/vite:build",
+      "executor": "@nx/vite:build",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
@@ -21,7 +21,7 @@
       }
     },
     "serve": {
-      "executor": "@nrwl/vite:dev-server",
+      "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "mail-ui:build"
@@ -38,7 +38,7 @@
       }
     },
     "preview": {
-      "executor": "@nrwl/vite:preview-server",
+      "executor": "@nx/vite:preview-server",
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "mail-ui:build"
@@ -53,15 +53,15 @@
       }
     },
     "test": {
-      "executor": "@nrwl/vite:test",
-      "outputs": ["coverage/apps/mail-ui"],
+      "executor": "@nx/vite:test",
+      "outputs": ["{workspaceRoot}/coverage/apps/mail-ui"],
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "../../coverage/apps/mail-ui"
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/mail-ui/**/*.{ts,tsx,js,jsx}"]

@@ -7,15 +7,12 @@
     "dev": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": [
-          "nx run tree:build",
-          "nx run tree:symlink"
-        ],
+        "commands": ["nx run tree:build", "nx run tree:symlink"],
         "parallel": false
       }
     },
     "build": {
-      "executor": "@nrwl/rollup:rollup",
+      "executor": "@nx/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "dependsOn": ["^build"],
       "options": {
@@ -55,14 +52,16 @@
             "input": ".",
             "output": "."
           }
-        ]
+        ],
+        "babelUpwardRootMode": true,
+        "updateBuildableProjectDepsInPackageJson": true
       }
     },
     "symlink": {
       "command": "node ./tools/symlink.js tree"
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["packages/tree/**/*.ts"]
