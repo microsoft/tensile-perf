@@ -8,7 +8,7 @@
     "change": "beachball change",
     "check-dependencies": "syncpack list-mismatches --prod --peer",
     "lint": "nx affected --target=lint --exclude mail-ui",
-    "test": "nx run-many --target=test --all --exclude mail-ui",
+    "test": "nx run-many --target=test --all --exclude mail-ui --parallel false",
     "type-check": "nx affected --target=type-check --exclude mail-ui"
   },
   "private": true,
