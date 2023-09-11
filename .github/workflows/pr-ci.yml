@@ -30,21 +30,11 @@ jobs:
           echo "::remove-matcher owner=eslint-compact::"
           echo "::remove-matcher owner=eslint-stylish::"
 
-      - name: swap npmrc
-        run: |
-          mv .npmrc backup.npmrc
-          mv ci.npmrc .npmrc
-
       - name: Install dependencies
         env:
           AZURE_DEVOPS_PASSWORD: ${{secrets.AZURE_DEVOPS_PASSWORD}}
           NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
         run: bash ${GITHUB_WORKSPACE}/yarn-ci.sh
-
-      - name: restore npmrc
-        run: |
-          mv .npmrc ci.npmrc
-          mv backup.npmrc .npmrc
 
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v3
@@ -68,21 +58,11 @@ jobs:
           node-version: 18.16.0
           cache: 'yarn'
 
-      - name: swap npmrc
-        run: |
-          mv .npmrc backup.npmrc
-          mv ci.npmrc .npmrc
-
       - name: Install dependencies
         env:
           AZURE_DEVOPS_PASSWORD: ${{secrets.AZURE_DEVOPS_PASSWORD}}
           NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
         run: bash ${GITHUB_WORKSPACE}/yarn-ci.sh
-
-      - name: restore npmrc
-        run: |
-          mv .npmrc ci.npmrc
-          mv backup.npmrc .npmrc
 
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v3
