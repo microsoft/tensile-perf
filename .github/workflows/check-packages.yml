@@ -1,0 +1,100 @@
+name: Check Packages
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches:
+      - main
+      - website
+
+permissions:
+  contents: 'read'
+  actions: 'read'
+
+jobs:
+  dependency-mismatches:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.16.0
+          cache: 'yarn'
+
+      - name: swap npmrc
+        run: |
+          mv .npmrc backup.npmrc
+          mv ci.npmrc .npmrc
+
+      - name: Install dependencies
+        env:
+          AZURE_DEVOPS_PASSWORD: ${{secrets.AZURE_DEVOPS_PASSWORD}}
+          NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+        run: bash ${GITHUB_WORKSPACE}/yarn-ci.sh
+
+      - name: restore npmrc
+        run: |
+          mv .npmrc ci.npmrc
+          mv backup.npmrc .npmrc
+
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            const syncpackVersion = require('./package.json').devDependencies.syncpack;
+
+            if (typeof syncpackVersion !== 'string') {
+              core.setFailed("Please check 'package.json', it should include 'syncpack' in 'devDependencies'")
+              return
+            }
+
+            core.exportVariable('SYNCPACK_VERSION', syncpackVersion);
+
+      - run: |
+          npx syncpack@$SYNCPACK_VERSION list-mismatches
+
+  change-files:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.16.0
+          cache: 'yarn'
+
+      - name: swap npmrc
+        run: |
+          mv .npmrc backup.npmrc
+          mv ci.npmrc .npmrc
+
+      - name: Install dependencies
+        env:
+          AZURE_DEVOPS_PASSWORD: ${{secrets.AZURE_DEVOPS_PASSWORD}}
+          NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+        run: bash ${GITHUB_WORKSPACE}/yarn-ci.sh
+
+      - name: restore npmrc
+        run: |
+          mv .npmrc ci.npmrc
+          mv backup.npmrc .npmrc
+
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            const beachballVersion = require('./package.json').devDependencies.beachball;
+
+            if (typeof beachballVersion !== 'string') {
+              core.setFailed("Please check 'package.json', it should include 'beachball' in 'devDependencies'")
+              return
+            }
+
+            core.exportVariable('BEACHBALL_VERSION', beachballVersion);
+
+      - run: |
+          npx beachball@$BEACHBALL_VERSION check

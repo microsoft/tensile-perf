@@ -1,0 +1,94 @@
+name: PR CI
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches:
+      - main
+      - website
+
+permissions:
+  contents: 'read'
+  actions: 'read'
+
+jobs:
+  build-test-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.16.0
+          cache: 'yarn'
+
+      - name: Remove eslint github actions annotations
+        run: |
+          echo "::remove-matcher owner=eslint-compact::"
+          echo "::remove-matcher owner=eslint-stylish::"
+
+      - name: swap npmrc
+        run: |
+          mv .npmrc backup.npmrc
+          mv ci.npmrc .npmrc
+
+      - name: Install dependencies
+        env:
+          AZURE_DEVOPS_PASSWORD: ${{secrets.AZURE_DEVOPS_PASSWORD}}
+          NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+        run: bash ${GITHUB_WORKSPACE}/yarn-ci.sh
+
+      - name: restore npmrc
+        run: |
+          mv .npmrc ci.npmrc
+          mv backup.npmrc .npmrc
+
+      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+        uses: nrwl/nx-set-shas@v3
+
+      - run: yarn nx affected --target=lint
+      - run: yarn nx affected --target=type-check
+      - run: yarn nx affected --target=generate-api --configuration=ci
+      - run: yarn nx affected --target=build
+      - run: yarn nx affected --target=test
+
+  E2E:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.16.0
+          cache: 'yarn'
+
+      - name: swap npmrc
+        run: |
+          mv .npmrc backup.npmrc
+          mv ci.npmrc .npmrc
+
+      - name: Install dependencies
+        env:
+          AZURE_DEVOPS_PASSWORD: ${{secrets.AZURE_DEVOPS_PASSWORD}}
+          NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+        run: bash ${GITHUB_WORKSPACE}/yarn-ci.sh
+
+      - name: restore npmrc
+        run: |
+          mv .npmrc ci.npmrc
+          mv backup.npmrc .npmrc
+
+      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+        uses: nrwl/nx-set-shas@v3
+
+      # - name: Install browsers
+      #   run: npx playwright install
+
+      # - name: Run E2E Tests
+      #   run: yarn nx affected --target=e2e --verbose
