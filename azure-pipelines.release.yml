@@ -44,11 +44,11 @@ jobs:
         displayName: Install dependencies
 
       - script: |
-          yarn nx run-many --target=lint --all --verbose --skip-nx-cache --exclude mail-ui
+          yarn nx run-many --target=lint --all --verbose --skip-nx-cache
         displayName: yarn lint
 
       - script: |
-          yarn nx run-many --target=type-check --all --verbose --skip-nx-cache --exclude mail-ui
+          yarn nx run-many --target=type-check --all --verbose --skip-nx-cache
         displayName: yarn type-check
 
       - script: |
@@ -60,7 +60,7 @@ jobs:
         displayName: yarn build
 
       - script: |
-          yarn nx run-many --target=test --all --verbose --exclude mail-ui --skip-nx-cache
+          yarn nx run-many --target=test --all --verbose --skip-nx-cache
         displayName: yarn test
 
       - script: |
