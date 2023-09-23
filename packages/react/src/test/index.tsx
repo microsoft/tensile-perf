@@ -1,11 +1,11 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT license.
 
-import { renderAddTest } from "./TestAdd";
+import { renderAddTest } from "./TestAdd.js";
 // import { renderInvalidateTest } from "./TestInvalidate";
-import { renderMountTest } from "./TestMount";
-import { renderRemoveTest } from "./TestRemove";
-import type { TestMap } from "../types";
+import { renderMountTest } from "./TestMount.js";
+import { renderRemoveTest } from "./TestRemove.js";
+import type { TestMap } from "../types.js";
 
 export const tests: TestMap = {
   'add': renderAddTest,
@@ -14,4 +14,4 @@ export const tests: TestMap = {
   'remove': renderRemoveTest,
 };
 
-export { TestApp } from './TestApp';
+export { TestApp } from './TestApp.js';

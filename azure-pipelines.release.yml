@@ -52,6 +52,10 @@ jobs:
         displayName: yarn type-check
 
       - script: |
+          yarn nx run-many --target=generate-api --all --verbose --skip-nx-cache
+        displayName: yarn generate api
+
+      - script: |
           yarn build --skip-nx-cache
         displayName: yarn build
 

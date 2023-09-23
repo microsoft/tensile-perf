@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT license.
 
-import type{ RandomTreeBuilderParams, RandomTreeNode, RandomTreeNodeCreateCallback } from '../types';
+import type{ RandomTreeBuilderParams, RandomTreeNode, RandomTreeNodeCreateCallback } from '../types.js';
 import { getRandomUtil } from '@tensile-perf/tools';
 import type { RandomUtil } from '@tensile-perf/tools';
 
@@ -36,7 +36,7 @@ export class RandomTreeBuilder<T> {
 
   /**
    * Builds a new tree based on the parameters passed to the constructor.
-   * @param createNode Callback function used to create tree nodes.
+   * @param createNode - Callback function used to create tree nodes.
    * @returns The root node of the tree.
    */
   public build = (createNode: RandomTreeNodeCreateCallback<T>): RandomTreeNode<T> => {
@@ -52,8 +52,8 @@ export class RandomTreeBuilder<T> {
 
   /**
    * Builds a tree from a fixture (e.g., from a tree saved as a JSON file)
-   * @param fixture Fixture node to start building from (i.e., the tree root)
-   * @param parent Parent node of the fixture node. Typically you wouldn't pass anything here.
+   * @param fixture - Fixture node to start building from (i.e., the tree root)
+   * @param parent - Parent node of the fixture node. Typically you wouldn't pass anything here.
    * @returns The root node of the tree.
    */
   public fromFixture = (fixture: RandomTreeNode<T>, parent: RandomTreeNode<T> | null = null): RandomTreeNode<T> => {

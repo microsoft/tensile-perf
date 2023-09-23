@@ -3,7 +3,7 @@
 
 import { basename, join, posix, sep } from 'path';
 import mkdirp from 'mkdirp';
-import { Config, Measurements } from './types';
+import { Config, Measurements } from './types.js';
 import fs from 'fs';
 
 const tensilePath = '.tensile';

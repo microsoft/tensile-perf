@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT license.
 
-import { TreeItemRenderer } from "../types";
+import { TreeItemRenderer } from "../types.js";
 
 export const getTestRenderer = <T>(renderer: string): TreeItemRenderer<T> | null => {
   const renderers = window.__TENSILE__?.renderers;

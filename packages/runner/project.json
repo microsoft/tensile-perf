@@ -12,59 +12,32 @@
       }
     },
     "build": {
-      "executor": "@nx/rollup:rollup",
-      "outputs": ["{options.outputPath}"],
+      "executor": "nx:run-commands",
       "dependsOn": ["^build"],
       "options": {
-        "buildableProjectDepsInPackageJsonType": "dependencies",
-        "outputPath": "packages/runner/dist",
-        "tsConfig": "packages/runner/tsconfig.lib.json",
-        "project": "packages/runner/package.json",
-        "entryFile": "packages/runner/src/index.ts",
-        "rollupConfig": "tools/getRollupOptions.js",
-        "compiler": "babel",
-        "external": ["tslib"],
-        "format": ["esm"],
-        "skipTypeField": true,
-        "assets": [
-          {
-            "glob": "packages/runner/README.md",
-            "input": ".",
-            "output": "."
-          },
-          {
-            "glob": "packages/runner/LICENSE.txt",
-            "input": ".",
-            "output": "."
-          },
-          {
-            "glob": "packages/runner/src/views/",
-            "input": ".",
-            "output": "./"
-          },
-          {
-            "glob": "packages/runner/bin/tensile.js",
-            "input": ".",
-            "output": "./bin"
-          },
-          {
-            "glob": "CONTRIBUTING.md",
-            "input": ".",
-            "output": "."
-          },
-          {
-            "glob": "SECURITY.md",
-            "input": ".",
-            "output": "."
-          },
-          {
-            "glob": "CODE_OF_CONDUCT.md",
-            "input": ".",
-            "output": "."
-          }
+        "cwd": "packages/runner",
+        "commands": [
+          { "command": "swc src --out-dir=lib --config module.type=es6" },
+          { "command": "node ./scripts/copyRunnerFiles.cjs" }
         ],
-        "babelUpwardRootMode": true,
-        "updateBuildableProjectDepsInPackageJson": true
+        "parallel": false
+      }
+    },
+    "generate-dts": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "packages/runner",
+        "commands": [{ "command": "tsc -p ./tsconfig.lib.json --emitDeclarationOnly" }],
+        "outputPath": []
+      }
+    },
+    "generate-api": {
+      "executor": "nx:run-commands",
+      "defaultConfiguration": "local",
+      "options": { "cwd": "packages/runner" },
+      "configurations": {
+        "ci": { "commands": [{ "command": "node ../../scripts/executors/generate-api --verbose" }] },
+        "local": { "commands": [{ "command": "node ../../scripts/executors/generate-api --local --verbose" }] }
       }
     },
     "linkbinary": {

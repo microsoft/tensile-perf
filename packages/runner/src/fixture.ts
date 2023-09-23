@@ -6,7 +6,7 @@ import type { RandomTreeSelectorNode } from '@tensile-perf/tree';
 
 import fs from 'fs';
 import { join } from 'path';
-import { getConfigFilePath } from './paths';
+import { getConfigFilePath } from './paths.js';
 
 import type { Config, ConfigFile, FixtureParams, FixtureSize, TreeJsonReplacer } from './types';
 

@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT license.
 
-import type { Formatter, ProcessedMeasurementData } from "../types";
+import type { Formatter, ProcessedMeasurementData } from "../types.js";
 
 const unknown = '<unknown>';
 

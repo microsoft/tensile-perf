@@ -1,5 +1,6 @@
 {
   "plugins": ["annotate-pure-calls"],
+  "presets": ["@nx/react/babel"],
   "env": {
     "development": {
       "presets": ["@nx/react/babel"]

@@ -2,7 +2,7 @@
 // Licensed under the MIT license.
 
 import { LCG } from 'random-seedable';
-import type { RandomUtilGetter } from '../types';
+import type { RandomUtilGetter } from '../types.js';
 
 export const DEFAULT_SEED = 4212021;
 

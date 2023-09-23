@@ -2,14 +2,14 @@
 // Licensed under the MIT license.
 
 import yargs from 'yargs/yargs';
-import { generateConfigFromCliParams } from './testConfig';
-import { generateFixtures } from './fixture';
-import { startServer, stopServer } from './server';
+import { generateConfigFromCliParams } from './testConfig.js';
+import { generateFixtures } from './fixture.js';
+import { startServer, stopServer } from './server.js';
 
-import type { CliParams } from './types';
-import { generateTachometerConfig } from './tachometerConfig';
-import { runTachometer } from './tachometer';
-// import { copyBenchFile } from './paths';
+import type { CliParams } from './types.js';
+import { generateTachometerConfig } from './tachometerConfig.js';
+import { runTachometer } from './tachometer.js';
+// import { copyBenchFile } from './paths.js';
 
 export const cli = async (processArgv: NodeJS.Process['argv']) => {
     const argv = yargs(processArgv.slice(2)).options({
@@ -40,8 +40,10 @@ export const cli = async (processArgv: NodeJS.Process['argv']) => {
     }).parseSync();
     
     await run(argv as CliParams);
-    // Not sure why it doesn't exit on its own
-    process.exit(0);
+    const isProd = !argv.dev;
+    if (isProd) {
+        process.exit(0);
+    }
 }
 
 export const run = async (argv: CliParams) => {

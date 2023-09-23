@@ -3,9 +3,9 @@
 
 import fs from 'fs';
 import path from 'path';
-import { getTachometerConfigFilePath } from './paths';
+import { getTachometerConfigFilePath } from './paths.js';
 import type { ConfigFile } from 'tachometer/lib/configfile.js';
-import type { Config } from './types';
+import type { Config } from './types.js';
 
 type TachometerConfigGeneratorFn = (testConfig: Config) => Partial<ConfigFile>;
 type MakeConfigJsonFn = (testConfig: Config) => Partial<ConfigFile>;

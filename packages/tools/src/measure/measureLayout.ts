@@ -2,7 +2,7 @@
 // Licensed under the MIT license.
 
 import afterframe from 'afterframe';
-import type { LayoutMeasureFn } from '../types';
+import type { LayoutMeasureFn } from '../types.js';
 
 export const measureLayout: LayoutMeasureFn = (measureName = 'tensile-layout', startMark = 'tensile-start-layout') => {
   performance.mark(startMark);

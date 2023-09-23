@@ -1,9 +1,8 @@
 {
   "name": "@tensile-perf/web-components",
   "version": "0.1.5",
-  "types": "./dist/src/index.d.ts",
-  "module": "./dist/index.js",
   "type": "module",
+  "module": "./blic/index.js",
   "dependencies": {
     "@tensile-perf/runner": "0.3.3",
     "@tensile-perf/tree": "0.1.0",
@@ -24,12 +23,12 @@
   },
   "exports": {
     ".": {
-      "types": "./dist/src/index.d.ts",
-      "default": "./dist/index.js"
+      "types": "./dist/index.d.ts",
+      "default": "./lib/index.js"
     },
     "./runner": {
-      "types": "./dist/src/runner.d.ts",
-      "default": "./dist/runner.js"
+      "types": "./dist/runner.d.ts",
+      "default": "./lib/runner.js"
     }
   }
 }

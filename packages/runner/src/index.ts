@@ -4,12 +4,12 @@
 export {
     cli,
     run
-} from './cli';
+} from './cli.js';
 
 export {
     cliReporter
-} from './reporters/cliReporter';
+} from './reporters/cliReporter.js';
 
 export {
     markdownReporter
-} from './reporters/markdownReporter'
+} from './reporters/markdownReporter.js'

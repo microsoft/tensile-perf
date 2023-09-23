@@ -1,9 +1,9 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT license.
 
-export { getRandomUtil } from './random/random';
-export type { RandomUtil } from './types';
+export { getRandomUtil } from './random/random.js';
+export type { RandomUtil } from './types.js';
 
-export { injectStyles } from './css/injectStyles';
-export { measureLayout } from './measure/measureLayout';
-export { measureJavascript } from './measure/measureJavascript';
+export { injectStyles } from './css/injectStyles.js';
+export { measureLayout } from './measure/measureLayout.js';
+export { measureJavascript } from './measure/measureJavascript.js';

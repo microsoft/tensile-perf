@@ -1,9 +1,9 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT license.
 
-import { getValue, getValueMs } from './values';
-import { decimalFormatter, roundFormatter } from "./formatters";
-import type { Browser, Processor, ProcessedMeasurementData } from "../types";
+import { getValue, getValueMs } from './values.js';
+import { decimalFormatter, roundFormatter } from "./formatters.js";
+import type { Browser, Processor, ProcessedMeasurementData } from "../types.js";
 
 const metricKey: keyof ProcessedMeasurementData = 'geometricMean';
 

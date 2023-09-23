@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT license.
 
-import { CssNamedColor, RgbColor } from "../types";
+import { CssNamedColor, RgbColor } from "../types.js";
 
 export const colors: Record<CssNamedColor, RgbColor> = {
     "aliceblue": [
