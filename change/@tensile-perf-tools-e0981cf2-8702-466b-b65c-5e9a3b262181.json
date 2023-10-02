@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "chore: update build process",
+  "packageName": "@tensile-perf/tools",
+  "email": "seanmonahan@microsoft.com",
+  "dependentChangeType": "patch"
+}
