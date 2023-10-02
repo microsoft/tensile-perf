@@ -30,7 +30,7 @@ jobs:
           NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
         run: bash ${GITHUB_WORKSPACE}/yarn-ci.sh
 
-        - uses: actions/github-script@v6
+      - uses: actions/github-script@v6
         with:
           script: |
             const syncpackVersion = require('./package.json').devDependencies.syncpack;
