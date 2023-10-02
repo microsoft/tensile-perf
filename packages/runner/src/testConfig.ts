@@ -1,14 +1,14 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT license.
 
-import { generateFixtureFileName, hasAllFixtureParamters, DEFAULT_FIXTURES } from "./fixture";
-import { defaultConfig } from "./defaultConfig";
-import { baseDirectory, getConfigFilePath } from "./paths";
+import { generateFixtureFileName, hasAllFixtureParamters, DEFAULT_FIXTURES } from "./fixture.js";
+import { defaultConfig } from "./defaultConfig.js";
+import { baseDirectory, getConfigFilePath } from "./paths.js";
 import fs from 'fs';
-import { join } from 'path';
+import { join, dirname } from 'path';
 import { pathToFileURL } from "url";
 
-import type { CliParams, Config, ConfigFile, FixtureSize } from "./types";
+import type { CliParams, Config, ConfigFile, FixtureSize } from "./types.js";
 
 type ConfigGeneratorFn = (params: CliParams) => Promise<Config>;
 
@@ -49,7 +49,7 @@ export const generateConfigFromCliParams: ConfigGeneratorFn = async ({ file, siz
     const { extends: userConfigExtendsPath } = userConfig;
 
     if (userConfigExtendsPath) {
-        const baseConfig = await readConfigFile(userConfigExtendsPath);
+        const baseConfig = await readConfigFile(join(dirname(configFilePath), userConfigExtendsPath));
         userConfig = mergeConfig(baseConfig, userConfig);
         delete userConfig.extends;
     }
@@ -90,7 +90,7 @@ export const generateConfigFromCliParams: ConfigGeneratorFn = async ({ file, siz
     }
 
     config.testFile = config.file.replace(baseDirectory(config.file), '');
-
+    
     const js = `
 export const config = ${JSON.stringify(config, null, 2)};
 `;

@@ -16,6 +16,9 @@
       "dependsOn": ["^build"],
       "inputs": ["production", "^production"]
     },
+    "generate-api": {
+      "dependsOn": ["generate-dts"]
+    },
     "lint": {
       "inputs": [
         "default",

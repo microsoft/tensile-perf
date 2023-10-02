@@ -3,13 +3,13 @@
 
 export {
     Tree,
-} from './tree/Tree'
+} from './tree/Tree.js'
 
 export {
     TreeNode,
-} from './tree/TreeNode';
+} from './tree/TreeNode.js';
 
-export { TestApp, tests } from './test';
+export { TestApp, tests } from './test/index.js';
 
 // export { useInvalidateContext } from './test/TestInvalidate';
 
@@ -19,4 +19,4 @@ export type {
     TestType,
     TestMap,
     TreeItemRenderer,
-} from './types'
+} from './types.js'

@@ -2,7 +2,7 @@
 // Licensed under the MIT license.
 
 import { main } from 'tachometer/lib/cli.js';
-import { getTachometerConfigFilePath, getTestResultFilePath } from './paths';
+import { getTachometerConfigFilePath, getTestResultFilePath } from './paths.js';
 import path from 'path';
 
 type RunTachometerFn = () => Promise<void>;

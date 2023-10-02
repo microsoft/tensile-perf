@@ -2,8 +2,8 @@
 // Licensed under the MIT license.
 
 import type { Attribute, RandomTreeNode } from '@tensile-perf/tree';
-import { TreeItemRenderer, TreeNodeAttrs } from '../types';
-import { getTestRenderer } from '../util/globalRenderers';
+import { TreeItemRenderer, TreeNodeAttrs } from '../types.js';
+import { getTestRenderer } from '../util/globalRenderers.js';
 
 type TreeValue = {
   classNames?: string[];

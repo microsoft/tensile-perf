@@ -2,8 +2,8 @@
 // Licensed under the MIT license.
 
 import * as React from 'react';
-import { useTestRenderer } from '../context/TestRendererContext';
-import type { TreeItemRenderer, TreeNodeProps } from '../types';
+import { useTestRenderer } from '../context/TestRendererContext.js';
+import type { TreeItemRenderer, TreeNodeProps } from '../types.js';
 import type { Attribute, RandomTreeNode } from '@tensile-perf/tree';
 
 type TreeValue = {

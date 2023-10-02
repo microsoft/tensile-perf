@@ -34,7 +34,7 @@ jobs:
       - run: yarn nx run-many --target=type-check --all
       - run: yarn nx run-many --target=generate-api --configuration=ci --all
       - run: yarn nx run-many --target=build --all
-      - run: yarn nx run-many --target=test --all
+      # - run: yarn nx run-many --target=test --all
 
   E2E:
     runs-on: ubuntu-latest

@@ -1,9 +1,9 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT license.
 
-import { CssSelectorBuilder } from "./CssSelectorBuilder";
-import type { CssSelectorTreeCreator, RandomTreeNodeCreateCallback, RandomTreeSelectorNode } from "../../types";
-import { CssSelector } from "./CssSelector";
+import { CssSelectorBuilder } from "./CssSelectorBuilder.js";
+import type { CssSelectorTreeCreator, RandomTreeNodeCreateCallback, RandomTreeSelectorNode } from "../../types.js";
+import { CssSelector } from "./CssSelector.js";
 
 export const cssSelectorTreeCreator: CssSelectorTreeCreator = ({ selectors = [], chances, seed, nonMatchingSelector, cssSelectorParams }) => {
     

@@ -3,15 +3,15 @@
 
 export {
     RandomTreeBuilder
-} from './tree/RandomTreeBuilder';
+} from './tree/RandomTreeBuilder.js';
 
 export {
     cssSelectorTreeCreator
-} from './tree/css/cssSelectorTreeCreator';
+} from './tree/css/cssSelectorTreeCreator.js';
 
 export type { 
     Attribute,
     RandomTreeNode,
     RandomTreeSelectorNode,
     SelectorTreeNode
-} from './types';
+} from './types.js';

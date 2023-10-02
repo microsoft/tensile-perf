@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT license.
 
-import { ConfigFile } from "./types";
+import { ConfigFile } from "./types.js";
 
 const defaultConfig: ConfigFile = {
     // List of files to test.
@@ -22,7 +22,7 @@ const defaultConfig: ConfigFile = {
     // Importmaps for your test.
     // See: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type/importmap
     imports: {
-        "@tensile-perf/tools": "/node_modules/@tensile-perf/tools/dist/index.js",
+        "@tensile-perf/tools": "/node_modules/@tensile-perf/tools/lib/index.js",
         "afterframe": "/node_modules/afterframe/dist/afterframe.module.js",
         "random-seedable": "/node_modules/random-seedable/src/index.js",
     },

@@ -1,8 +1,9 @@
 {
   "name": "@tensile-perf/react",
   "version": "0.1.5",
-  "module": "./dist/index.js",
   "type": "module",
+  "module": "./lib/index.js",
+  "main": "./lib-commonjs/index.js",
   "dependencies": {
     "@tensile-perf/runner": "0.3.3",
     "@tensile-perf/tree": "0.1.0",
@@ -11,6 +12,7 @@
     "tslib": "^2.5.0"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.21.4",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "react": "^17.0.0",
@@ -22,8 +24,9 @@
   },
   "exports": {
     ".": {
-      "types": "./dist/src/index.d.ts",
-      "default": "./dist/index.js"
+      "types": "./dist/index.d.ts",
+      "require": "./lib-commonjs/index.js",
+      "default": "./lib/index.js"
     }
   }
 }

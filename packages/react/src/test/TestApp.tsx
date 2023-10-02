@@ -2,7 +2,7 @@
 // Licensed under the MIT license.
 
 import * as React from 'react';
-import { TestRendererProvider } from '../context/TestRendererContext';
+import { TestRendererProvider } from '../context/TestRendererContext.js';
 
 export type TestAppProps<T> = {
   renderers?: Map<string, T>;

@@ -17,49 +17,31 @@
       }
     },
     "build": {
-      "executor": "@nx/rollup:rollup",
-      "outputs": ["{options.outputPath}"],
+      "executor": "nx:run-commands",
       "dependsOn": ["^build"],
       "options": {
-        "buildableProjectDepsInPackageJsonType": "dependencies",
-        "outputPath": "packages/web-components/dist",
-        "tsConfig": "packages/web-components/tsconfig.lib.json",
-        "project": "packages/web-components/package.json",
-        "entryFile": "packages/web-components/src/index.ts",
-        "rollupConfig": "tools/getRollupOptions.js",
-        "compiler": "babel",
-        "external": ["tslib"],
-        "format": ["esm"],
-        "skipTypeField": true,
-        "assets": [
-          {
-            "glob": "packages/web-components/README.md",
-            "input": ".",
-            "output": "."
-          },
-          {
-            "glob": "packages/web-components/LICENSE.txt",
-            "input": ".",
-            "output": "."
-          },
-          {
-            "glob": "CONTRIBUTING.md",
-            "input": ".",
-            "output": "."
-          },
-          {
-            "glob": "SECURITY.md",
-            "input": ".",
-            "output": "."
-          },
-          {
-            "glob": "CODE_OF_CONDUCT.md",
-            "input": ".",
-            "output": "."
-          }
+        "cwd": "packages/web-components",
+        "commands": [
+          { "command": "swc src --out-dir=lib --config module.type=es6" }
         ],
-        "babelUpwardRootMode": true,
-        "updateBuildableProjectDepsInPackageJson": true
+        "parallel": false
+      }
+    },
+    "generate-dts": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "packages/web-components",
+        "commands": [{ "command": "tsc -p ./tsconfig.lib.json --emitDeclarationOnly" }],
+        "outputPath": []
+      }
+    },
+    "generate-api": {
+      "executor": "nx:run-commands",
+      "defaultConfiguration": "local",
+      "options": { "cwd": "packages/web-components" },
+      "configurations": {
+        "ci": { "commands": [{ "command": "node ../../scripts/executors/generate-api --verbose" }] },
+        "local": { "commands": [{ "command": "node ../../scripts/executors/generate-api --local --verbose" }] }
       }
     },
     "lint": {

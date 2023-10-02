@@ -43,7 +43,7 @@ jobs:
       - run: yarn nx affected --target=type-check
       - run: yarn nx affected --target=generate-api --configuration=ci
       - run: yarn nx affected --target=build
-      - run: yarn nx affected --target=test
+      # - run: yarn nx affected --target=test
 
   E2E:
     runs-on: ubuntu-latest

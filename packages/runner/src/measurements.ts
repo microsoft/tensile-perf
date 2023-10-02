@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT license.
 
-import type { Measurements, ProcessedMeasurementData, ProcessedMeasurements, SimpleMeasurementData } from "./types"
+import type { Measurements, ProcessedMeasurementData, ProcessedMeasurements, SimpleMeasurementData } from "./types.js"
 
 export const processMeasurements = (measurements: Measurements): Measurements => {
 

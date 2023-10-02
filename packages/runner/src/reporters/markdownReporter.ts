@@ -2,8 +2,8 @@
 // Licensed under the MIT license.
 
 import { markdownTable } from "markdown-table";
-import { processReportMeasurements } from "./processReportMeasurements";
-import { Reporter } from "../types";
+import { processReportMeasurements } from "./processReportMeasurements.js";
+import { Reporter } from "../types.js";
 
 export const markdownReporter: Reporter = (measurements) => {
     const processed = processReportMeasurements(measurements);

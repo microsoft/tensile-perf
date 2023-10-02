@@ -2,7 +2,7 @@
 // Licensed under the MIT license.
 
 import { getRandomUtil } from '@tensile-perf/tools';
-import type { CssSelectorParams, CssSelectorType } from '../../types';
+import type { CssSelectorParams, CssSelectorType } from '../../types.js';
 import type { RandomUtil } from '@tensile-perf/tools';
 
 export const DEFAULT_SELECTOR_TYPES = [

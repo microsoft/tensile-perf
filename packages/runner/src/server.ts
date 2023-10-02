@@ -10,10 +10,10 @@ import { fileURLToPath } from 'url';
 import { Server } from 'http';
 import os from 'os';
 
-import type { Browser, Config, MeasurementData, Measurements } from './types';
+import type { Browser, Config, MeasurementData, Measurements } from './types.js';
 import { Handler } from "express";
-import { baseDirectory, writeTestResults } from "./paths";
-import { processMeasurements } from "./measurements";
+import { baseDirectory, writeTestResults } from "./paths.js";
+import { processMeasurements } from "./measurements.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
