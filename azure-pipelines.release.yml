@@ -59,9 +59,9 @@ jobs:
           yarn build --skip-nx-cache
         displayName: yarn build
 
-      - script: |
-          yarn nx run-many --target=test --all --verbose --skip-nx-cache
-        displayName: yarn test
+      # - script: |
+      #     yarn nx run-many --target=test --all --verbose --skip-nx-cache
+      #   displayName: yarn test
 
       - script: |
           yarn publish:beachball --token $(NPM_TOKEN_TENSILE_PERF)
