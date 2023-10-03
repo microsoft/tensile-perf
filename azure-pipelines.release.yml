@@ -64,7 +64,7 @@ jobs:
       #   displayName: yarn test
 
       - script: |
-          yarn publish:beachball --token $(NPM_TOKEN_TENSILE_PERF)
+          yarn beachball:publish --token $(NPM_TOKEN_TENSILE_PERF)
           git reset --hard origin/main
         env:
           GITHUB_PAT: $(githubPAT)
