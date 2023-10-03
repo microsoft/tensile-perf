@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "manually bump versions",
+  "packageName": "@tensile-perf/tree",
+  "email": "seanmonahan@microsoft.com",
+  "dependentChangeType": "patch"
+}
