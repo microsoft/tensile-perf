@@ -4,10 +4,9 @@
   "neverConnectToCloud": true,
   "tasksRunnerOptions": {
     "default": {
-      "runner": "nx-cloud",
+      "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"],
-        "accessToken": "Mzc1Y2UzZWQtYzE1YS00MmI3LWFkMzMtNzI3NTI4NzFiMzk3fHJlYWQtd3JpdGU="
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
     }
   },
