@@ -1,0 +1,7 @@
+{
+  "type": "none",
+  "comment": "manually bump versions after failed deploy",
+  "packageName": "@tensile-perf/tree",
+  "email": "seanmonahan@microsoft.com",
+  "dependentChangeType": "none"
+}
