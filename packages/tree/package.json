@@ -1,11 +1,11 @@
 {
   "name": "@tensile-perf/tree",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "type": "module",
   "module": "./lib/index.js",
   "main": "./lib-commonjs/index.js",
   "dependencies": {
-    "@tensile-perf/tools": "0.1.2"
+    "@tensile-perf/tools": "0.1.4"
   },
   "exports": {
     ".": {
