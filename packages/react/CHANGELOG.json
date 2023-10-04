@@ -1,0 +1,58 @@
+{
+  "name": "@tensile-perf/react",
+  "entries": [
+    {
+      "date": "Wed, 04 Oct 2023 21:37:33 GMT",
+      "version": "0.1.11",
+      "tag": "@tensile-perf/react_v0.1.11",
+      "comments": {
+        "none": [
+          {
+            "author": "tristan.watanabe@gmail.com",
+            "package": "@tensile-perf/react",
+            "commit": "24b86aa20f5e302403ca0cebbef9d869ff8dcd4e",
+            "comment": "fix: update to latest version after beachball publish failure."
+          },
+          {
+            "author": "seanmonahan@microsoft.com",
+            "package": "@tensile-perf/react",
+            "commit": "261a8e486d6b4eca15518c608094818241207951",
+            "comment": "manually bump versions after failed deploy"
+          }
+        ],
+        "patch": [
+          {
+            "author": "seanmonahan@microsoft.com",
+            "package": "@tensile-perf/react",
+            "commit": "36734d87f49239f9fe935456d2248b6d841ccf09",
+            "comment": "chore: update build process"
+          },
+          {
+            "author": "seanmonahan@microsoft.com",
+            "package": "@tensile-perf/react",
+            "commit": "8e71b7ec48f87710fa7b276c71c0fff88749f6ec",
+            "comment": "manually bump versions"
+          },
+          {
+            "author": "beachball",
+            "package": "@tensile-perf/react",
+            "comment": "Bump @tensile-perf/runner to v0.3.9",
+            "commit": "not available"
+          },
+          {
+            "author": "beachball",
+            "package": "@tensile-perf/react",
+            "comment": "Bump @tensile-perf/tree to v0.1.6",
+            "commit": "not available"
+          },
+          {
+            "author": "beachball",
+            "package": "@tensile-perf/react",
+            "comment": "Bump @tensile-perf/tools to v0.1.6",
+            "commit": "not available"
+          }
+        ]
+      }
+    }
+  ]
+}

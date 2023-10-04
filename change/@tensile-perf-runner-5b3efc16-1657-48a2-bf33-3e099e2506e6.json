@@ -1,7 +1,0 @@
-{
-  "type": "none",
-  "comment": "manually bump versions after failed deploy",
-  "packageName": "@tensile-perf/runner",
-  "email": "seanmonahan@microsoft.com",
-  "dependentChangeType": "none"
-}
