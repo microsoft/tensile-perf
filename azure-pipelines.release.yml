@@ -36,7 +36,7 @@ jobs:
       - script: |
           git config user.name "Fluent UI Build"
           git config user.email "fluentui-internal@service.microsoft.com"
-          git remote set-url origin https://$(githubUser):$(githubPAT)@github.com/microsoft/fluentui.git
+          git remote set-url origin https://$(githubUser):$(githubPAT)@github.com/microsoft/tensile-perf.git
         displayName: Authenticate git for pushes
 
       - script: |
