@@ -1,13 +1,13 @@
 {
   "name": "@tensile-perf/react",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "type": "module",
   "module": "./lib/index.js",
   "main": "./lib-commonjs/index.js",
   "dependencies": {
-    "@tensile-perf/runner": "0.3.7",
-    "@tensile-perf/tree": "0.1.4",
-    "@tensile-perf/tools": "0.1.4",
+    "@tensile-perf/runner": "0.3.8",
+    "@tensile-perf/tree": "0.1.5",
+    "@tensile-perf/tools": "0.1.5",
     "use-context-selector": "1.4.1",
     "tslib": "^2.5.0"
   },

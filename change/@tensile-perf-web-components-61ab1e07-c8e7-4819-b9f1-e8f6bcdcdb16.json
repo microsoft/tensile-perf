@@ -1,0 +1,7 @@
+{
+  "type": "none",
+  "comment": "fix: update to latest version after beachball publish failure.",
+  "packageName": "@tensile-perf/web-components",
+  "email": "tristan.watanabe@gmail.com",
+  "dependentChangeType": "none"
+}
