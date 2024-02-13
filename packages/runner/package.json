@@ -1,13 +1,13 @@
 {
   "name": "@tensile-perf/runner",
-  "version": "0.3.9",
+  "version": "0.3.10",
   "type": "module",
   "module": "./lib/index.js",
   "bin": {
     "tensile": "bin/tensile.js"
   },
   "dependencies": {
-    "@tensile-perf/tree": "0.1.6",
+    "@tensile-perf/tree": "0.1.7",
     "chromedriver": "121.0.0",
     "cli-table": "0.3.11",
     "edgedriver": "5.2.1",

@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "chore: update SWC to include \"externalHelpers\"",
-  "packageName": "@tensile-perf/runner",
-  "email": "seanmonahan@microsoft.com",
-  "dependentChangeType": "patch"
-}

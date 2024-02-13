@@ -2,6 +2,39 @@
   "name": "@tensile-perf/web-components",
   "entries": [
     {
+      "date": "Tue, 13 Feb 2024 19:49:10 GMT",
+      "version": "0.1.12",
+      "tag": "@tensile-perf/web-components_v0.1.12",
+      "comments": {
+        "patch": [
+          {
+            "author": "seanmonahan@microsoft.com",
+            "package": "@tensile-perf/web-components",
+            "commit": "451f377a5bd77e9f3599df9ddf42dd42b2e5296d",
+            "comment": "chore: update SWC to include \"externalHelpers\""
+          },
+          {
+            "author": "beachball",
+            "package": "@tensile-perf/web-components",
+            "comment": "Bump @tensile-perf/runner to v0.3.10",
+            "commit": "not available"
+          },
+          {
+            "author": "beachball",
+            "package": "@tensile-perf/web-components",
+            "comment": "Bump @tensile-perf/tree to v0.1.7",
+            "commit": "not available"
+          },
+          {
+            "author": "beachball",
+            "package": "@tensile-perf/web-components",
+            "comment": "Bump @tensile-perf/tools to v0.1.7",
+            "commit": "not available"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 04 Oct 2023 21:37:33 GMT",
       "version": "0.1.11",
       "tag": "@tensile-perf/web-components_v0.1.11",
