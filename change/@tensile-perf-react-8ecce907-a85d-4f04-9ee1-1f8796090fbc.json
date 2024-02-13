@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "chore: update SWC to include \"externalHelpers\"",
+  "packageName": "@tensile-perf/react",
+  "email": "seanmonahan@microsoft.com",
+  "dependentChangeType": "patch"
+}

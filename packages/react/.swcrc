@@ -8,7 +8,7 @@
       "decorators": false,
       "dynamicImport": false
     },
-    "externalHelpers": true,
+    "externalHelpers": false,
     "transform": {
       "react": {
         "runtime": "classic",
