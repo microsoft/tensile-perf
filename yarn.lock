@@ -3239,21 +3239,6 @@
   dependencies:
     defer-to-connect "^2.0.1"
 
-"@tensile-perf/tools@0.1.6":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@tensile-perf/tools/-/tools-0.1.6.tgz#b30adbe322769d872811f3f66220422fac686d20"
-  integrity sha512-BEw+vbus7M8D4rROZuMHKTbLyBhFGYPv8fJV81uElpPQLwWfVj3B/E73EIPbDt1lT8MQYq6MXoE4N9lSfaeFmw==
-  dependencies:
-    afterframe "1.0.2"
-    random-seedable "1.0.8"
-
-"@tensile-perf/tree@0.1.6":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@tensile-perf/tree/-/tree-0.1.6.tgz#3958402840a8b6b8a4d184507284084610109a32"
-  integrity sha512-SP1FZ63LGogoU1lGHK9vS3/qt4yX+W3LkMjO9QaZWp/p/02IiXZ0mlicIiiNBLbZvNPQfSU4yRSQ02gQAtfuYQ==
-  dependencies:
-    "@tensile-perf/tools" "0.1.6"
-
 "@testim/chrome-version@^1.1.4":
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/@testim/chrome-version/-/chrome-version-1.1.4.tgz#86e04e677cd6c05fa230dd15ac223fa72d1d7090"
