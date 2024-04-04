@@ -1,8 +1,16 @@
 # Change Log - @tensile-perf/runner
 
-This log was last generated on Tue, 13 Feb 2024 19:49:10 GMT and should not be manually modified.
+This log was last generated on Thu, 04 Apr 2024 20:53:43 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 0.3.11
+
+Thu, 04 Apr 2024 20:53:43 GMT
+
+### Patches
+
+- chore: bump chromedriver to 123.0.1 (seanmonahan@microsoft.com)
 
 ## 0.3.10
 

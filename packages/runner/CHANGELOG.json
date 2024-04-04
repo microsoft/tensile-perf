@@ -2,6 +2,21 @@
   "name": "@tensile-perf/runner",
   "entries": [
     {
+      "date": "Thu, 04 Apr 2024 20:53:43 GMT",
+      "version": "0.3.11",
+      "tag": "@tensile-perf/runner_v0.3.11",
+      "comments": {
+        "patch": [
+          {
+            "author": "seanmonahan@microsoft.com",
+            "package": "@tensile-perf/runner",
+            "commit": "0150e64f759426578a812e4cf246b4714356abce",
+            "comment": "chore: bump chromedriver to 123.0.1"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 13 Feb 2024 19:49:10 GMT",
       "version": "0.3.10",
       "tag": "@tensile-perf/runner_v0.3.10",
