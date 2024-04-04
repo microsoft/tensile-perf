@@ -1,0 +1,9 @@
+{
+    "tool": "Credential Scanner",
+    "suppressions": [
+      {
+        "file": ".git/config",
+        "_justification": "Standard token for CI pipeline"
+      }
+    ]
+  }
