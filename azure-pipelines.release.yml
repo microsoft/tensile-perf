@@ -87,9 +87,9 @@ extends:
               #     yarn nx run-many --target=test --all --verbose --skip-nx-cache
               #   displayName: yarn test
 
-              # - script: |
-              #     yarn beachball:publish --token $(NPM_TOKEN_TENSILE_PERF)
-              #     git reset --hard origin/main
-              #   env:
-              #     GITHUB_PAT: $(githubPAT)
-              #   displayName: Publish changes and bump versions
+              - script: |
+                  yarn beachball:publish --token $(NPM_TOKEN_TENSILE_PERF)
+                  git reset --hard origin/main
+                env:
+                  GITHUB_PAT: $(githubPAT)
+                displayName: Publish changes and bump versions
