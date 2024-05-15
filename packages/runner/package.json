@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@tensile-perf/tree": "0.1.7",
-    "chromedriver": "123.0.1",
+    "chromedriver": "124.0.3",
     "cli-table": "0.3.11",
     "edgedriver": "5.2.1",
     "ejs": "3.1.9",
