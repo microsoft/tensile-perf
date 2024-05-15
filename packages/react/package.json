@@ -1,11 +1,11 @@
 {
   "name": "@tensile-perf/react",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "type": "module",
   "module": "./lib/index.js",
   "main": "./lib-commonjs/index.js",
   "dependencies": {
-    "@tensile-perf/runner": "0.3.11",
+    "@tensile-perf/runner": "0.3.12",
     "@tensile-perf/tree": "0.1.7",
     "@tensile-perf/tools": "0.1.7",
     "use-context-selector": "1.4.1",

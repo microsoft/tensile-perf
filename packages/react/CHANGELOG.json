@@ -2,6 +2,21 @@
   "name": "@tensile-perf/react",
   "entries": [
     {
+      "date": "Wed, 15 May 2024 20:55:27 GMT",
+      "version": "0.1.14",
+      "tag": "@tensile-perf/react_v0.1.14",
+      "comments": {
+        "patch": [
+          {
+            "author": "beachball",
+            "package": "@tensile-perf/react",
+            "comment": "Bump @tensile-perf/runner to v0.3.12",
+            "commit": "not available"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 04 Apr 2024 20:53:43 GMT",
       "version": "0.1.13",
       "tag": "@tensile-perf/react_v0.1.13",

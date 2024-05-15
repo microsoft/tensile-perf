@@ -2,6 +2,21 @@
   "name": "@tensile-perf/web-components",
   "entries": [
     {
+      "date": "Wed, 15 May 2024 20:55:27 GMT",
+      "version": "0.1.14",
+      "tag": "@tensile-perf/web-components_v0.1.14",
+      "comments": {
+        "patch": [
+          {
+            "author": "beachball",
+            "package": "@tensile-perf/web-components",
+            "comment": "Bump @tensile-perf/runner to v0.3.12",
+            "commit": "not available"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 04 Apr 2024 20:53:43 GMT",
       "version": "0.1.13",
       "tag": "@tensile-perf/web-components_v0.1.13",

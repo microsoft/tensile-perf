@@ -1,10 +1,10 @@
 {
   "name": "@tensile-perf/web-components",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "type": "module",
   "module": "./blic/index.js",
   "dependencies": {
-    "@tensile-perf/runner": "0.3.11",
+    "@tensile-perf/runner": "0.3.12",
     "@tensile-perf/tree": "0.1.7",
     "@tensile-perf/tools": "0.1.7",
     "tslib": "^2.5.0"

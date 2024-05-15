@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "chore: bump chromedriver to 124.x",
-  "packageName": "@tensile-perf/runner",
-  "email": "seanmonahan@microsoft.com",
-  "dependentChangeType": "patch"
-}
