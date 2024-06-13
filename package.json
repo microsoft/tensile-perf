@@ -6,7 +6,7 @@
     "beachball:publish": "beachball publish --access public -y",
     "build": "nx run-many --targets=build && nx run runner:linkbinary",
     "change": "beachball change",
-    "check-dependencies": "syncpack list-mismatches --prod --peer",
+    "check-dependencies": "syncpack list-mismatches",
     "lint": "nx affected --target=lint",
     "test": "nx run-many --target=test --all --parallel false",
     "type-check": "nx affected --target=type-check",
