@@ -1,0 +1,19 @@
+{
+  "dependencyTypes": ["prod", "peer"],
+  "semverGroups": [
+    {
+      "label": "use exact version numbers in production and peer",
+      "packages": ["**"],
+      "dependencyTypes": ["prod, peer"],
+      "dependencies": ["**"],
+      "range": ""
+    },
+    {
+        "label": "use carat range for chromedriver in peer",
+        "packages": ["runner"],
+        "dependencyTypes": ["peer"],
+        "dependencies": ["chromedriver"],
+        "range": "^"
+      }
+  ]
+}
