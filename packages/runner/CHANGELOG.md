@@ -1,8 +1,16 @@
 # Change Log - @tensile-perf/runner
 
-This log was last generated on Wed, 15 May 2024 20:55:27 GMT and should not be manually modified.
+This log was last generated on Thu, 13 Jun 2024 02:28:17 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 0.4.0
+
+Thu, 13 Jun 2024 02:28:17 GMT
+
+### Minor changes
+
+- feat: move chromedriver to peer dependency (13071055+chrisdholt@users.noreply.github.com)
 
 ## 0.3.12
 

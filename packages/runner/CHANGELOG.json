@@ -2,6 +2,21 @@
   "name": "@tensile-perf/runner",
   "entries": [
     {
+      "date": "Thu, 13 Jun 2024 02:28:17 GMT",
+      "version": "0.4.0",
+      "tag": "@tensile-perf/runner_v0.4.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "13071055+chrisdholt@users.noreply.github.com",
+            "package": "@tensile-perf/runner",
+            "commit": "fb4900f5c1947558abcf9ce13d22996fde11f167",
+            "comment": "feat: move chromedriver to peer dependency"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 15 May 2024 20:55:27 GMT",
       "version": "0.3.12",
       "tag": "@tensile-perf/runner_v0.3.12",

@@ -1,7 +1,0 @@
-{
-  "type": "minor",
-  "comment": "feat: move chromedriver to peer dependency",
-  "packageName": "@tensile-perf/runner",
-  "email": "13071055+chrisdholt@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}

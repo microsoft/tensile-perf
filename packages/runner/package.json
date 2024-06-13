@@ -1,6 +1,6 @@
 {
   "name": "@tensile-perf/runner",
-  "version": "0.3.12",
+  "version": "0.4.0",
   "type": "module",
   "module": "./lib/index.js",
   "bin": {
