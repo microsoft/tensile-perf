@@ -1,8 +1,16 @@
 # Change Log - @tensile-perf/react
 
-This log was last generated on Thu, 13 Jun 2024 02:28:17 GMT and should not be manually modified.
+This log was last generated on Tue, 25 Jun 2024 23:15:29 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 0.2.0
+
+Tue, 25 Jun 2024 23:15:29 GMT
+
+### Minor changes
+
+- feat: export utilities (seanmonahan@microsoft.com)
 
 ## 0.1.15
 

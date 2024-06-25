@@ -2,6 +2,21 @@
   "name": "@tensile-perf/react",
   "entries": [
     {
+      "date": "Tue, 25 Jun 2024 23:15:29 GMT",
+      "version": "0.2.0",
+      "tag": "@tensile-perf/react_v0.2.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "seanmonahan@microsoft.com",
+            "package": "@tensile-perf/react",
+            "commit": "9213c0fdb6c3cbe4e884dba2a5f3563e68738c23",
+            "comment": "feat: export utilities"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 13 Jun 2024 02:28:17 GMT",
       "version": "0.1.15",
       "tag": "@tensile-perf/react_v0.1.15",

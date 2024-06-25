@@ -1,7 +1,0 @@
-{
-  "type": "minor",
-  "comment": "feat: export utilities",
-  "packageName": "@tensile-perf/web-components",
-  "email": "seanmonahan@microsoft.com",
-  "dependentChangeType": "patch"
-}
