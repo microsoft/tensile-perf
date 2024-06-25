@@ -4,14 +4,14 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Tree } from '../tree/Tree.js';
-import { useMeasure } from '../hooks/usePerformanceMeasure.js';
+import { usePerformanceMeasure } from '../hooks/usePerformanceMeasure.js';
 import type { TestRenderFunction } from '../types.js';
 import { TestApp } from './TestApp.js';
 
 export const renderRemoveTest: TestRenderFunction = ({ fixture, itemRenderer, renderTargetSelector, TestWrapper = TestApp, onComplete }) => {
     const Remove = () => {
 
-      const { startMeasure, endMeasure } = useMeasure();
+      const { startMeasure, endMeasure } = usePerformanceMeasure();
       const [removed, setRemoved] = React.useState(false);
       React.useEffect(() => {
         setTimeout(() => {

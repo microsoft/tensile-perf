@@ -20,3 +20,6 @@ export type {
     TestMap,
     TreeItemRenderer,
 } from './types.js'
+
+export { usePerformanceMeasure } from './hooks/usePerformanceMeasure.js';
+export { injectStyles, measureLayout, measureJavascript } from '@tensile-perf/tools';
