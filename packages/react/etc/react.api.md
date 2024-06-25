@@ -7,6 +7,15 @@
 import * as React_2 from 'react';
 
 // @public (undocumented)
+export const injectStyles: (params: RandomCssFromSelectorsParams) => void;
+
+// @public (undocumented)
+export const measureJavascript: JavascriptMeasureFn;
+
+// @public (undocumented)
+export const measureLayout: LayoutMeasureFn;
+
+// @public (undocumented)
 export const TestApp: React_2.FC<TestAppProps<unknown>>;
 
 // @public (undocumented)
@@ -42,6 +51,12 @@ export type TreeItemRenderer<T> = (props: TreeItemRendererProps<T>) => JSX.Eleme
 
 // @public (undocumented)
 export const TreeNode: <T extends RandomTreeNode<unknown>>(props: TreeNodeProps<T>) => JSX.Element;
+
+// @public (undocumented)
+export const usePerformanceMeasure: () => {
+    startMeasure: () => void;
+    endMeasure: () => void;
+};
 
 // (No @packageDocumentation comment for this package)
 

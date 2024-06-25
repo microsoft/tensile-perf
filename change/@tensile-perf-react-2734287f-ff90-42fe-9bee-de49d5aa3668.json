@@ -1,0 +1,7 @@
+{
+  "type": "minor",
+  "comment": "feat: export utilities",
+  "packageName": "@tensile-perf/react",
+  "email": "seanmonahan@microsoft.com",
+  "dependentChangeType": "patch"
+}

@@ -4,14 +4,14 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Tree } from '../tree/Tree.js';
-import { useMeasure } from '../hooks/usePerformanceMeasure.js';
+import { usePerformanceMeasure } from '../hooks/usePerformanceMeasure.js';
 import type { TestRenderFunction } from '../types.js';
 import { TestApp } from './TestApp.js';
 
 export const renderAddTest: TestRenderFunction = ({ fixture, itemRenderer, renderTargetSelector, TestWrapper = TestApp, onComplete }) => {
     const Add = () => {
 
-      const { startMeasure, endMeasure } = useMeasure();
+      const { startMeasure, endMeasure } = usePerformanceMeasure();
       const [added, setAdded] = React.useState(false);
       React.useEffect(() => {
         setTimeout(() => {

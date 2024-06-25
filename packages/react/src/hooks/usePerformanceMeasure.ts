@@ -13,7 +13,7 @@ import { measureJavascript, measureLayout } from '@tensile-perf/tools';
 //     }, []);
 // };
 
-export const useMeasure = () => {
+export const usePerformanceMeasure = () => {
     const startTime = React.useRef<number>(-1);
 
     const startMeasure = () => {

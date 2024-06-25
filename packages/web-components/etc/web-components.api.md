@@ -5,6 +5,21 @@
 ```ts
 
 // @public (undocumented)
+export const injectStyles: (params: RandomCssFromSelectorsParams) => void;
+
+// @public (undocumented)
+export const measureJavascript: JavascriptMeasureFn;
+
+// @public (undocumented)
+export const measureLayout: LayoutMeasureFn;
+
+// @public (undocumented)
+export const measurePerformance: () => {
+    startMeasure: () => void;
+    endMeasure: () => void;
+};
+
+// @public (undocumented)
 export type TestMap = Record<TestType, TestRenderFunction>;
 
 // @public (undocumented)
