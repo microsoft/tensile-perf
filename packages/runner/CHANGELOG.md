@@ -1,8 +1,16 @@
 # Change Log - @tensile-perf/runner
 
-This log was last generated on Thu, 13 Jun 2024 02:28:17 GMT and should not be manually modified.
+This log was last generated on Mon, 22 Jul 2024 20:24:53 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 0.4.1
+
+Mon, 22 Jul 2024 20:24:53 GMT
+
+### Patches
+
+- Fix for dependency security alerts (7559015+janechu@users.noreply.github.com)
 
 ## 0.4.0
 

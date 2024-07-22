@@ -1,8 +1,16 @@
 # Change Log - @tensile-perf/react
 
-This log was last generated on Tue, 25 Jun 2024 23:15:29 GMT and should not be manually modified.
+This log was last generated on Mon, 22 Jul 2024 20:24:53 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 0.2.1
+
+Mon, 22 Jul 2024 20:24:53 GMT
+
+### Patches
+
+- Bump @tensile-perf/runner to v0.4.1
 
 ## 0.2.0
 

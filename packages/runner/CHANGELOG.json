@@ -2,6 +2,21 @@
   "name": "@tensile-perf/runner",
   "entries": [
     {
+      "date": "Mon, 22 Jul 2024 20:24:53 GMT",
+      "version": "0.4.1",
+      "tag": "@tensile-perf/runner_v0.4.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "7559015+janechu@users.noreply.github.com",
+            "package": "@tensile-perf/runner",
+            "commit": "f10470fcd4ca0008f0990d84987f5d749880d0a5",
+            "comment": "Fix for dependency security alerts"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 13 Jun 2024 02:28:17 GMT",
       "version": "0.4.0",
       "tag": "@tensile-perf/runner_v0.4.0",
