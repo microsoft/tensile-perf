@@ -10,14 +10,14 @@
     "@tensile-perf/tree": "0.1.7",
     "cli-table": "0.3.11",
     "edgedriver": "5.2.1",
-    "ejs": "3.1.9",
-    "express": "4.18.2",
+    "ejs": "3.1.10",
+    "express": "4.19.2",
     "express-useragent": "1.0.15",
     "geckodriver": "4.0.4",
     "markdown-table": "3.0.3",
     "mkdirp": "2.1.5",
     "safaridriver": "0.0.5",
-    "tachometer": "0.7.0",
+    "tachometer": "0.7.1",
     "yargs": "17.7.1"
   },
   "devDependencies": {
