@@ -39,11 +39,8 @@ const makeConfigJson: MakeConfigJsonFn = ({ numRuns, browsers, file, test, fixtu
       name: `${file} - ${fixtureFileName} - ${test}`,
       url: getUrl(),
       measurement: 'global',
-      browser: {
-        name: browser,
-        // binary: binaries[browser],
-      }
-    }
+      browser,
+    };
   }))
 
   const json: ConfigFile = {
