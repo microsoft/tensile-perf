@@ -1,7 +1,0 @@
-{
-  "type": "minor",
-  "comment": "allow advanced browser configs",
-  "packageName": "@tensile-perf/runner",
-  "email": "863023+radium-v@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}

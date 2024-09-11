@@ -1,8 +1,16 @@
 # Change Log - @tensile-perf/runner
 
-This log was last generated on Mon, 22 Jul 2024 20:24:53 GMT and should not be manually modified.
+This log was last generated on Wed, 11 Sep 2024 17:09:38 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 0.5.0
+
+Wed, 11 Sep 2024 17:09:38 GMT
+
+### Minor changes
+
+- allow advanced browser configs (863023+radium-v@users.noreply.github.com)
 
 ## 0.4.1
 

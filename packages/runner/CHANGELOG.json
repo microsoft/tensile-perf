@@ -2,6 +2,21 @@
   "name": "@tensile-perf/runner",
   "entries": [
     {
+      "date": "Wed, 11 Sep 2024 17:09:38 GMT",
+      "version": "0.5.0",
+      "tag": "@tensile-perf/runner_v0.5.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "863023+radium-v@users.noreply.github.com",
+            "package": "@tensile-perf/runner",
+            "commit": "f5e218017a151d6bb488de444d4e6e51ad8156b7",
+            "comment": "allow advanced browser configs"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 22 Jul 2024 20:24:53 GMT",
       "version": "0.4.1",
       "tag": "@tensile-perf/runner_v0.4.1",
