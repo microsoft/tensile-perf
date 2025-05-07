@@ -2,6 +2,21 @@
   "name": "@tensile-perf/runner",
   "entries": [
     {
+      "date": "Wed, 07 May 2025 21:46:16 GMT",
+      "version": "0.5.1",
+      "tag": "@tensile-perf/runner_v0.5.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "863023+radium-v@users.noreply.github.com",
+            "package": "@tensile-perf/runner",
+            "commit": "39dd2c75d2f81cc72cd31e9be270e7f82622fc6b",
+            "comment": "chore: bump express to ^4.21.2"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 06 May 2025 21:17:33 GMT",
       "version": "0.5.0",
       "tag": "@tensile-perf/runner_v0.5.0",
