@@ -1,0 +1,8 @@
+{
+    "type": "patch",
+    "comment": "chore: bump express to ^4.21.2",
+    "packageName": "@tensile-perf/runner",
+    "email": "863023+radium-v@users.noreply.github.com",
+    "dependentChangeType": "patch"
+  }
+  
