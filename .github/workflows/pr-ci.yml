@@ -16,11 +16,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@a37ce9120846195fa4ece8f58b268e6043cb2f26 # v3.7.0
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@3235b876344d2a9aa001b8d1453c930bba69e610 # v3.9.1
         with:
           node-version: 18.16.0
           cache: 'yarn'
@@ -37,7 +37,7 @@ jobs:
         run: bash ${GITHUB_WORKSPACE}/yarn-ci.sh
 
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
-        uses: nrwl/nx-set-shas@v3
+        uses: nrwl/nx-set-shas@0e2d18b530b83b68263ff7b74e46b1ba300c83fc # v3.3.2
 
       - run: yarn nx affected --target=lint
       - run: yarn nx affected --target=type-check
@@ -49,11 +49,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@a37ce9120846195fa4ece8f58b268e6043cb2f26 # v3.7.0
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@3235b876344d2a9aa001b8d1453c930bba69e610 # v3.9.1
         with:
           node-version: 18.16.0
           cache: 'yarn'
@@ -65,7 +65,7 @@ jobs:
         run: bash ${GITHUB_WORKSPACE}/yarn-ci.sh
 
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
-        uses: nrwl/nx-set-shas@v3
+        uses: nrwl/nx-set-shas@0e2d18b530b83b68263ff7b74e46b1ba300c83fc # v3.3.2
 
       # - name: Install browsers
       #   run: npx playwright install
