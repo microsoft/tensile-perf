@@ -11342,9 +11342,9 @@ syncpack@^10.7.3:
     ts-toolbelt "9.6.0"
 
 systeminformation@^5.3.3:
-  version "5.21.9"
-  resolved "https://registry.yarnpkg.com/systeminformation/-/systeminformation-5.21.9.tgz#59287c2371317d569cc9742f8a7df05e65d21449"
-  integrity sha512-7pI4mu9P/2MGDV0T49B52E7IULBGj+kRVk6JSYUj5qfAk7N7C7aNX15fXziqrbgZntc6/jjYzWeb/x41jhg/eA==
+  version "5.33.13"
+  resolved "https://registry.yarnpkg.com/systeminformation/-/systeminformation-5.33.13.tgz#6b5e8d2f3203e1e7bb5e4bb0e897c496179fc60e"
+  integrity sha512-GtyakkchTQKymM1WeAB652zi3rM1q00RKdc+jZe9KGstuc/mWUwAnQGN/RE5gVYvHIR8xYOUIUD9irVKDtA0wA==
 
 tabbable@^5.2.0:
   version "5.3.3"
