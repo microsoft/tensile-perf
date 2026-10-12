@@ -68,7 +68,7 @@
     "swc-loader": "^0.2.3",
     "syncpack": "^10.7.3",
     "typescript": "5.1.6",
-    "vite": "4.3.4",
+    "vite": "4.3.9",
     "vite-plugin-eslint": "^1.8.1",
     "vite-tsconfig-paths": "4.2.0",
     "vitest": "0.31.0",
